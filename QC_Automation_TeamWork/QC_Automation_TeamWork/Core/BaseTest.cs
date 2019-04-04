@@ -2,7 +2,7 @@
 
 namespace QC_Automation_TeamWork.Core
 {
-    class BaseTest
+    public class BaseTest
     {
         [TestInitialize]
         public void TestSetup()
