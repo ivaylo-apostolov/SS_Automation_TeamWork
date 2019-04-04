@@ -12,7 +12,7 @@ namespace QC_Automation_TeamWork.Core
             Browser = Driver.Browser;
         }
 
-        public IWebDriver GetElement(By by)
+        public IWebElement GetElement(By by)
         {
             return Browser.FindElement(by);
         }
