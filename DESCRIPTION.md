@@ -15,3 +15,5 @@ Added new result in TestData class.
 Added GetLoginPanelTitle() in LoginPage class.
 
 Added 01LoginAdmin and 02LogoutAdmin TESTS in separate classes.
+
+***Edited project name from OpenCartTestsTeamWork to QC_Automation_TeamWork
