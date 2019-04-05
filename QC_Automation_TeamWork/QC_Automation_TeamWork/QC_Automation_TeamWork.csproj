@@ -64,7 +64,6 @@
     <Compile Include="Pages\StoreHomePage\StoreHomePage.cs" />
     <Compile Include="Pages\StoreHomePage\StoreHomePageElementMap.cs" />
     <Compile Include="Tests\MenuCamerasButtonTesting.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

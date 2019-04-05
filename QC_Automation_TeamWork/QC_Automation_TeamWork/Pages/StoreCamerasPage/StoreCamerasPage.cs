@@ -9,9 +9,9 @@ namespace QC_Automation_TeamWork.Pages.StoreCamerasPage
 {
     public class StoreCamerasPage : BasePage<StoreCamerasPageElementMap>
     {
-        internal void LocateCamerasPageHeader()
+        internal string LocateCamerasPageHeader()
         {
-            Map.CamerasHeader;
+            return Map.CamerasHeader.Text;
         }
     }
 }

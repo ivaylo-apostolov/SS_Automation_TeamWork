@@ -1,4 +1,5 @@
-﻿using QC_Automation_TeamWork.Core;
+﻿using OpenQA.Selenium;
+using QC_Automation_TeamWork.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,14 @@ namespace QC_Automation_TeamWork.Pages.StoreCamerasPage
 {
     public class StoreCamerasPageElementMap : BasePageElementMap
     {
-        public object CamerasHeader { get; internal set; }
+        public IWebElement CamerasHeader
+        {
+            get
+            {
+                return GetElement(By.CssSelector("h2"));
+            }
+        }
 
-        
+
     }
 }
