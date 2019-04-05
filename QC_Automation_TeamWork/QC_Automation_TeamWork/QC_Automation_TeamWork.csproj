@@ -59,11 +59,19 @@
     <Compile Include="Core\Driver.cs" />
     <Compile Include="Data\Models\User.cs" />
     <Compile Include="Data\TestData.cs" />
+
     <Compile Include="Pages\DashboardPage\DashboardPage.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageElementMap.cs" />
     <Compile Include="Pages\LoginPage\LoginPage.cs" />
     <Compile Include="Pages\LoginPage\LoginPageElementMap.cs" />
     <Compile Include="Tests\Test01DashboardPageOpenCartLink.cs" />
+
+    <Compile Include="Pages\StoreCamerasPage\StoreCamerasPage.cs" />
+    <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageElementMap.cs" />
+    <Compile Include="Pages\StoreHomePage\StoreHomePage.cs" />
+    <Compile Include="Pages\StoreHomePage\StoreHomePageElementMap.cs" />
+    <Compile Include="Tests\MenuCamerasButtonTesting.cs" />
+
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

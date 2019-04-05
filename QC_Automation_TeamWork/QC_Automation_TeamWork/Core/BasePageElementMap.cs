@@ -17,7 +17,6 @@ namespace OpenCartTestsTeamWork.Core
         {
             return Browser.FindElement(by);
         }
-
         public IReadOnlyCollection<IWebElement> GetElements(By by)
         {
             return Browser.FindElements(by);

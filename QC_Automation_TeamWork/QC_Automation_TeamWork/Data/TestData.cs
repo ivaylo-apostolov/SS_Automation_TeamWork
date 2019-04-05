@@ -33,6 +33,12 @@ namespace OpenCartTestsTeamWork.Data
             get
             {
                 return "The best FREE and open-source eCommerce platform";
+
+        public static string ExpectedCamerasPageHeading
+        {
+            get
+            {
+                return "Cameras";
             }
         }
     }
