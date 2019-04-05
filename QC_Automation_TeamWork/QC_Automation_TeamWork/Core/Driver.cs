@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace QC_Automation_TeamWork.Core
+namespace OpenCartTestsTeamWork.Core
 {
     public static class Driver
     {
@@ -14,7 +14,7 @@ namespace QC_Automation_TeamWork.Core
             {
                 if (browser == null)
                 {
-                    throw new NullReferenceException("Webdriver is not started! Call StartBrowser method first!");
+                    throw new NullReferenceException("Webdriver is not started! Call StartBrowser method first");
                 }
                 return browser;
             }
@@ -24,16 +24,16 @@ namespace QC_Automation_TeamWork.Core
             }
         }
 
-        internal static void StartBrowser()
-        {
-            Browser = new ChromeDriver();
-            Browser.Manage().Window.FullScreen();
-        }
+            public static void StartBrowser()
+            {
+                Browser = new ChromeDriver();
+                Browser.Manage().Window.Maximize();
+            }
 
-        internal static void StopBrowser()
-        {
+            public static void StopBrowser()
+            {
             Browser.Quit();
-            Browser = null;
-        }
+            Browser = null; 
+            }
     }
 }

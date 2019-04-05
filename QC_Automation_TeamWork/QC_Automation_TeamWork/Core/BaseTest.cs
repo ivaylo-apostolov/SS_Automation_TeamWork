@@ -1,6 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace QC_Automation_TeamWork.Core
+namespace OpenCartTestsTeamWork.Core
 {
     public class BaseTest
     {

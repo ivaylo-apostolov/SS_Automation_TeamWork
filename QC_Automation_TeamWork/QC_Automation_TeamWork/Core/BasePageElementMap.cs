@@ -1,7 +1,8 @@
-﻿using OpenQA.Selenium;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
-namespace QC_Automation_TeamWork.Core
+namespace OpenCartTestsTeamWork.Core
 {
     public class BasePageElementMap
     {
@@ -15,6 +16,10 @@ namespace QC_Automation_TeamWork.Core
         public IWebElement GetElement(By by)
         {
             return Browser.FindElement(by);
+        }
+        public IReadOnlyCollection<IWebElement> GetElements(By by)
+        {
+            return Browser.FindElements(by);
         }
     }
 }
