@@ -6,7 +6,7 @@ Added LoginPanelTitle in LoginPageElementMap class.
 
 Created class DashboardPagelementMap;
 
-Modified DashboardPage to DashboardPage : BasePage<DashboardPageElementMap>
+Modified DashboardPage to DashboardPage : BasePage <DashboardPageElementMap>
 
 Added Logout() in DashboardPage.
 
