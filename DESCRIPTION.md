@@ -4,7 +4,7 @@ Differences from the skeleton:
 
 Added LoginPanelTitle in LoginPageElementMap class.
 
-Created class DashboardPagelementMap;
+Created class DashboardPageElementMap;
 
 Modified DashboardPage to DashboardPage : BasePage DashboardPageElementMap
 
@@ -14,4 +14,4 @@ Added new result in TestData class.
 
 Added GetLoginPanelTitle() in LoginPage class.
 
-Added 01LoginAdmin and 02LogoutAdmin in separate classes.
+Added 01LoginAdmin and 02LogoutAdmin TESTS in separate classes.
