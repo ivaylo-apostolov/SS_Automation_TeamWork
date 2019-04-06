@@ -4,9 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QC_Automation_TeamWork.Core
+namespace OpenCartTestsTeamWork.Core
 {
-    class BasePage
+    public class BasePage<TM> where TM : BasePageElementMap, new()
     {
+        protected TM Map
+        {
+            get
+            {
+                return new TM();
+            }
+        }
     }
 }
