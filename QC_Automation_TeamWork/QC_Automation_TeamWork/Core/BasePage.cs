@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OpenCartTestsTeamWork.Core
+namespace QC_Automation_TeamWork.Core
 {
     public class BasePage<TM> where TM : BasePageElementMap, new()
     {
