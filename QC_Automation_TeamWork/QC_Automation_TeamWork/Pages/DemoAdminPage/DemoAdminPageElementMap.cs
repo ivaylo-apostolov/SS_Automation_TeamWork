@@ -10,18 +10,13 @@ namespace QC_Automation_TeamWork.Pages.DemoAdminPage
 {
     public class DemoAdminPageElementMap : BasePageElementMap
     {
-
         public IWebElement Username
         {
             get
             {
-
-
                 return GetElement(By.Id("input-username"));
             }
         }
-
-
 
         public IWebElement Password
         {

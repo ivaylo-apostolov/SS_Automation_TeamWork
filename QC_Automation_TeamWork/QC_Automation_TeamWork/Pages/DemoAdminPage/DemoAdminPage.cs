@@ -26,6 +26,16 @@ namespace QC_Automation_TeamWork.Pages.DemoAdminPage
             Driver.Browser.SwitchTo().Window(lastTab);
         }
 
+        internal void FillinLogingForm()
+        {
+            Map.Username.Clear();
+            Map.Username.SendKeys("demo");
+
+            Map.Password.Clear();
+            Map.Password.SendKeys("demo");
+        }
+
+
         internal void EnterLogInButton()
         {
             Map.LogInButton.Click();

@@ -24,11 +24,14 @@ namespace QC_Automation_TeamWork.Tests
 
             var demoAdminPage = new DemoAdminPage();
             demoAdminPage.SwitchToLastTab();
+            demoAdminPage.FillinLogingForm();
             demoAdminPage.EnterLogInButton();
 
             var dashboardPage = new DashboardPage();
 
             Assert.AreEqual("Dashboard", dashboardPage.AdminHeader());
+
+            Thread.Sleep(2000);
         }
     }
 }
