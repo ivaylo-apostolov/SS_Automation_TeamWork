@@ -19,11 +19,11 @@ namespace QC_Automation_TeamWork.Tests
             homePage.Navigate();
             homePage.ClickDemoButton();
 
-            //var demoPage = new DemoPage();
-            //demoPage.ClickAdministrationSection();
+            var demoPage = new DemoPage();
+            demoPage.ClickAdministrationSection();
 
             var demoAdminPage = new DemoAdminPage();
-            demoAdminPage.Navigate();
+            demoAdminPage.SwitchToLastTab();
             demoAdminPage.EnterLogInButton();
 
             var dashboardPage = new DashboardPage();

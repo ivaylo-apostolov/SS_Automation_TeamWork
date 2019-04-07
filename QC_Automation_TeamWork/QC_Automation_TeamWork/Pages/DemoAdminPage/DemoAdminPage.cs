@@ -2,6 +2,7 @@
 using QC_Automation_TeamWork.Core;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,14 @@ namespace QC_Automation_TeamWork.Pages.DemoAdminPage
         internal void Navigate()
         {
             Driver.Browser.Navigate().GoToUrl(pageUrl);
+        }
+
+        internal void SwitchToLastTab()
+        {
+            ReadOnlyCollection<string> windowHandles = Driver.Browser.WindowHandles;
+            //string firstTab = windowHandles.First();
+            string lastTab = windowHandles.Last();
+            Driver.Browser.SwitchTo().Window(lastTab);
         }
 
         internal void EnterLogInButton()
