@@ -1,8 +1,9 @@
 ﻿using System;
-using OpenCartTestsTeamWork.Core;
+using QC_Automation_TeamWork.Pages.DashboardPage;
 using OpenQA.Selenium;
+using QC_Automation_TeamWork.Core;
 
-namespace OpenCartTestsTeamWork.Pages.DashboardPage
+namespace QC_Automation_TeamWork.Pages.DashboardPage
 {
     public class DashboardPage : BasePage<DashboardPageElementMap>
     {
@@ -15,12 +16,11 @@ namespace OpenCartTestsTeamWork.Pages.DashboardPage
         internal void OpenCart()
         {
             Map.OpenCartLink.Click();
-        }      
+        }
 
         public string GetHomePageHeadingText()
         {
             return Map.HomePageHeading.Text;
-        }     
-     
+        }
     }
 }

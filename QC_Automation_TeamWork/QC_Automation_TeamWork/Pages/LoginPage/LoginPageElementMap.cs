@@ -1,7 +1,7 @@
-﻿using OpenCartTestsTeamWork.Core;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using QC_Automation_TeamWork.Core;
 
-namespace OpenCartTestsTeamWork.Pages.LoginPage
+namespace QC_Automation_TeamWork.Pages.LoginPage
 {
     public class LoginPageElementMap : BasePageElementMap
     {

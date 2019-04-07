@@ -1,8 +1,8 @@
-﻿using OpenCartTestsTeamWork.Core;
+﻿using QC_Automation_TeamWork.Core;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace OpenCartTestsTeamWork.Pages.DashboardPage
+namespace QC_Automation_TeamWork.Pages.DashboardPage
 {
     public class DashboardPageElementMap : BasePageElementMap
     {
@@ -20,7 +20,6 @@ namespace OpenCartTestsTeamWork.Pages.DashboardPage
             {
                 return GetElement(By.CssSelector("h1"));
             }
-
         }
     }
 }

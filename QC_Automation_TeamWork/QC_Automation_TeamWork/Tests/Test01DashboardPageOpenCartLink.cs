@@ -1,14 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenCartTestsTeamWork.Core;
-using OpenCartTestsTeamWork.Data;
-using OpenCartTestsTeamWork.Pages;
-using OpenCartTestsTeamWork.Pages.DashboardPage;
-using OpenCartTestsTeamWork.Pages.LoginPage;
-using OpenQA;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
+using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Data;
+using QC_Automation_TeamWork.Pages.DashboardPage;
+using QC_Automation_TeamWork.Pages.LoginPage;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace OpenCartTestsTeamWork.Tests
+namespace QC_Automation_TeamWork.Tests
 {
     [TestClass]
     public class AdminDemoDashboardPage : BaseTest
@@ -29,8 +30,7 @@ namespace OpenCartTestsTeamWork.Tests
             var dashboardPage = new DashboardPage();
             dashboardPage.OpenCart();
 
-            Assert.AreEqual(TestData.OpenCartHomePageHeading, dashboardPage.GetHomePageHeadingText());     
-        
+            Assert.AreEqual(TestData.OpenCartHomePageHeading, dashboardPage.GetHomePageHeadingText());
         }
     }
 }

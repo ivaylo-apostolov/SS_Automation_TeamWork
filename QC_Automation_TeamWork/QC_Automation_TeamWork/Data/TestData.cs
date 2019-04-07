@@ -1,9 +1,16 @@
-﻿using OpenCartTestsTeamWork.Data.Models;
+﻿using QC_Automation_TeamWork.Data.Models;
 
-namespace OpenCartTestsTeamWork.Data
+namespace QC_Automation_TeamWork.Data
 {
     public static class TestData
     {
+        public static string ExpectedCamerasPageHeading
+        {
+            get
+            {
+                return "Cameras";
+            }
+        }
         public static User User
         {
             get
@@ -37,3 +44,5 @@ namespace OpenCartTestsTeamWork.Data
         }
     }
 }
+    
+
