@@ -59,14 +59,15 @@
     <Compile Include="Core\Driver.cs" />
     <Compile Include="Data\Models\User.cs" />
     <Compile Include="Data\TestData.cs" />
-
+    <Compile Include="Pages\Dashboard\DashboardPage.cs" />
+    <Compile Include="Pages\Dashboard\DashboardPageElementMap.cs" />
+    <Compile Include="Pages\DemoAdminPage\DemoAdminPage.cs" />
+    <Compile Include="Pages\DemoAdminPage\DemoAdminPageElementMap.cs" />
     <Compile Include="Pages\DemoPage\DemoPage.cs" />
     <Compile Include="Pages\DemoPage\DemoPageElementMap.cs" />
     <Compile Include="Pages\OpenCartHomePage\OpenCartHomePage.cs" />
     <Compile Include="Pages\OpenCartHomePage\OpenCartHomePageElementMap.cs" />
     <Compile Include="Tests\DemoAdminLogin.cs" />
-    <Compile Include="UnitTest1.cs" />
-
     <Compile Include="Pages\DashboardPage\DashboardPage.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageElementMap.cs" />
     <Compile Include="Pages\LoginPage\LoginPage.cs" />
@@ -76,14 +77,12 @@
     <Compile Include="Pages\StoreHomePage\StoreHomePage.cs" />
     <Compile Include="Pages\StoreHomePage\StoreHomePageElementMap.cs" />
     <Compile Include="Tests\MenuCamerasButtonTesting.cs" />
-
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Test01DashboardPageOpenCartLink.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
