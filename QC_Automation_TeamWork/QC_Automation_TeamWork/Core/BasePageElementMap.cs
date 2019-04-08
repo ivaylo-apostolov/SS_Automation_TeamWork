@@ -3,7 +3,18 @@ using System.Collections.Generic;
 
 namespace QC_Automation_TeamWork.Core
 {
-    class BasePageElementMap
+    public class BasePageElementMap
     {
+        protected IWebDriver Browser;
+
+        public BasePageElementMap()
+        {
+            Browser = Driver.Browser;
+        }
+
+        public IWebElement GetElement(By by)
+        {
+            return Browser.FindElement(by);
+        }
     }
 }

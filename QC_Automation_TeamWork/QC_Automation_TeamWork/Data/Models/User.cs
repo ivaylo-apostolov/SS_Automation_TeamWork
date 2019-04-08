@@ -1,7 +1,15 @@
-﻿
-namespace QC_Automation_TeamWork.Data.Models
+﻿namespace QC_Automation_TeamWork.Data.Models
 {
-    class User
+    public class User
     {
+        public User(string username, string password)
+        {
+            Username = username;
+            Password = password;
+        }
+
+        public string Username { get; set; }
+
+        public string Password { get; set; }
     }
 }
