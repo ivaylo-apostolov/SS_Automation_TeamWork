@@ -7,6 +7,7 @@ namespace QC_Automation_TeamWork.Core
     public class BasePageElementMap
     {
         protected IWebDriver Browser;
+
         public BasePageElementMap()
         {
             Browser = Driver.Browser;
