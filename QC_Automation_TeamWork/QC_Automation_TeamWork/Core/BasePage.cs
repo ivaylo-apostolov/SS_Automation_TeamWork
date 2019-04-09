@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QC_Automation_TeamWork.Core
+﻿namespace QC_Automation_TeamWork.Core
 {
     public class BasePage<TM> where TM : BasePageElementMap, new()
     {
