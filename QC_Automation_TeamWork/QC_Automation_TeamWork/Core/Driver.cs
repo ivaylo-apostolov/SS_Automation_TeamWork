@@ -24,14 +24,14 @@ namespace QC_Automation_TeamWork.Core
             }
         }
 
-        public static void StartBrowser()
+        internal static void StartBrowser()
 
         {
             Browser = new ChromeDriver();
-            Browser.Manage().Window.Maximize();
+            Browser.Manage().Window.FullScreen();
         }
 
-        public static void StopBrowser()
+        internal static void StopBrowser()
         {
             Browser.Quit();
             Browser = null;
