@@ -31,22 +31,23 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
             Map.LoginButton.Click();
         }
 
-        public DashboardHomePage Login(User user)
+        public DashboardPage.DashboardPage Login(User user)
         {
             TypeUsername(user.Username);
             TypePassword(user.Password);
             ClickLoginButton();
 
-            return new DashboardHomePage();
+            return new DashboardPage.DashboardPage();
         }
 
         public string GetUsernameInputValue()
         {
             return Map.UsernameElement.GetAttribute("value");
         }
-    }
 
-    public class DashboardHomePage
-    {
+        public string GetLoginPanelTitleText()
+        {
+            return Map.LoginPanelTitle.Text;
+        }
     }
 }

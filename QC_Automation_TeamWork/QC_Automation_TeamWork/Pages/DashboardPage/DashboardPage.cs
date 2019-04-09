@@ -22,5 +22,10 @@ namespace QC_Automation_TeamWork.Pages.DashboardPage
         {
             return Map.HomePageHeading.Text;
         }
+
+        internal void Logout()
+        {
+            Map.LogoutButton.Click();
+        }
     }
 }

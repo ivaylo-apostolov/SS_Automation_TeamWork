@@ -42,6 +42,14 @@ namespace QC_Automation_TeamWork.Data
                 return "The best FREE and open-source eCommerce platform";
             }
         }
+
+        public static string LoginPanelDefaultTitle
+        {
+            get
+            {
+                return "Please enter your login details.";
+            }
+        }
     }
 }
     

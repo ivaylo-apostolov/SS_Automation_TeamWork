@@ -17,5 +17,10 @@ namespace QC_Automation_TeamWork.Core
         {
             return Browser.FindElement(by);
         }
+
+        public IReadOnlyCollection<IWebElement> GetElements(By by)
+        {
+            return Browser.FindElements(by);
+        }
     }
 }

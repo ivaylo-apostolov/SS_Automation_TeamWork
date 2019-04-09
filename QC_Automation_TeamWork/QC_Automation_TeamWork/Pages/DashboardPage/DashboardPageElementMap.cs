@@ -21,5 +21,13 @@ namespace QC_Automation_TeamWork.Pages.DashboardPage
                 return GetElement(By.CssSelector("h1"));
             }
         }
+
+        public IWebElement LogoutButton
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='header']/div/ul/li[2]/a/span"));
+            }
+        }
     }
 }
