@@ -1,7 +1,12 @@
-﻿namespace QC_Automation_TeamWork.Core
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
+
+namespace QC_Automation_TeamWork.Core
 {
-    public class BasePage<TM> where TM : BasePageElementMap, new()
+    public class BaseComponent<TM> where TM : BasePageElementMap, new()
     {
+        protected IWebDriver driver = Driver.Browser;
+
         protected TM Map
         {
             get
@@ -11,7 +16,7 @@
         }
     }
 
-    public class BasePage<TM, TV> : BasePage<TM>
+    public class BaseComponent<TM, TV> : BaseComponent<TM>
         where TM : BasePageElementMap, new()
         where TV : BasePageValidator<TM>, new()
     {
@@ -21,4 +26,3 @@
         }
     }
 }
-
