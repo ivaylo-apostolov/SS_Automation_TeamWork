@@ -17,6 +17,7 @@ namespace QC_Automation_TeamWork.Core
 
         public IWebElement GetElement(By by)
         {
+            var t = Browser.FindElement(by);
             bool isDisplayed = BrowserWait.Until(driver => driver.FindElement(by).Displayed);
             bool isEnabled = BrowserWait.Until(driver => driver.FindElement(by).Enabled);
 

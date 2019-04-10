@@ -64,11 +64,7 @@
     <Compile Include="Pages\DashboardPage\DashboardPageValidator.cs" />
     <Compile Include="Pages\DemoAdminPage\DemoAdminPage.cs" />
     <Compile Include="Pages\DemoAdminPage\DemoAdminPageElementMap.cs" />
-    <Compile Include="Pages\DemoPage\DemoPage.cs" />
-    <Compile Include="Pages\DemoPage\DemoPageElementMap.cs" />
     <Compile Include="Pages\LoginPage\LoginPageValidator.cs" />
-    <Compile Include="Pages\OpenCartHomePage\OpenCartHomePage.cs" />
-    <Compile Include="Pages\OpenCartHomePage\OpenCartHomePageElementMap.cs" />
     <Compile Include="Pages\PageComponents\Navigation\Catalog\Catalog.cs" />
     <Compile Include="Pages\PageComponents\Navigation\Catalog\CatalogElementMap.cs" />
     <Compile Include="Pages\PageComponents\Navigation\Catalog\CatalogValidator.cs" />
