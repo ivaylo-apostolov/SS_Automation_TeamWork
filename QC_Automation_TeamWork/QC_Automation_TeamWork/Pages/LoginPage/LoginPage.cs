@@ -1,9 +1,9 @@
 ﻿using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data.Models;
 
-namespace QC_Automation_TeamWork.Pages.LoginPage
+namespace QC_Automation_TeamWork.Pages
 {
-    public class LoginPage : BasePage<LoginPageElementMap>
+    public class LoginPage : BasePage<LoginPageElementMap, LoginPageValidator>
     {
         private string pageURL = "https://demo.opencart.com/admin/";
 
@@ -28,26 +28,22 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
 
         internal void ClickLoginButton()
         {
-            Map.LoginButton.Click();
+            var element = Map.LoginButton;
+            element.Click();
         }
 
-        public DashboardPage.DashboardPage Login(User user)
+        public DashboardPage Login(User user)
         {
             TypeUsername(user.Username);
             TypePassword(user.Password);
             ClickLoginButton();
 
-            return new DashboardPage.DashboardPage();
+            return new DashboardPage();
         }
 
         public string GetUsernameInputValue()
         {
             return Map.UsernameElement.GetAttribute("value");
-        }
-
-        public string GetLoginPanelTitleText()
-        {
-            return Map.LoginPanelTitle.Text;
         }
     }
 }

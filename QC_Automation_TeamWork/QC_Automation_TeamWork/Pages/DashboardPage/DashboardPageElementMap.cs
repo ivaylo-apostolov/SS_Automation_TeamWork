@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace QC_Automation_TeamWork.Pages.DashboardPage
+namespace QC_Automation_TeamWork.Pages
 {
     public class DashboardPageElementMap : BasePageElementMap
     {
