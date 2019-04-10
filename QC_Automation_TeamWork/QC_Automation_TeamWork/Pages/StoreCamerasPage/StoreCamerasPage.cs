@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace QC_Automation_TeamWork.Pages.StoreCamerasPage
 {
-    public class StoreCamerasPage : BasePage<StoreCamerasPageElementMap>
+    public class StoreCamerasPage : BasePage<StoreCamerasPageElementMap, StoreCamerasPageValidator>
     {
         internal string LocateCamerasPageHeader()
         {
