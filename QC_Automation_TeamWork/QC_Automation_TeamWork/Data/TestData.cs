@@ -43,7 +43,6 @@ namespace QC_Automation_TeamWork.Data
             }
         }
 
-
         public static string LoginPanelDefaultTitle
         {
             get
@@ -51,8 +50,6 @@ namespace QC_Automation_TeamWork.Data
                 return "Please enter your login details.";
             }
         }
-
-
     }
 }
     

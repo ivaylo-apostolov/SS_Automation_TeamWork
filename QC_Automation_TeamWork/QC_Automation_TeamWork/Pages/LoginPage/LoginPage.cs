@@ -31,7 +31,6 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
             Map.LoginButton.Click();
         }
 
-
         public DashboardPage.DashboardPage Login(User user)
         {
             TypeUsername(user.Username);
