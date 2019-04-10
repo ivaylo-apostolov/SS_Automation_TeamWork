@@ -5,6 +5,7 @@ using QC_Automation_TeamWork.Pages.DemoPage;
 using QC_Automation_TeamWork.Pages.OpenCartHomePage;
 using QC_Automation_TeamWork.Pages.DemoAdminPage;
 using System.Threading;
+using QC_Automation_TeamWork.Pages.DashboardPage;
 
 namespace QC_Automation_TeamWork.Tests
 {

@@ -10,5 +10,15 @@
             }
         }
     }
+
+    public class BasePage<TM, TV> : BasePage<TM>
+        where TM : BasePageElementMap, new()
+        where TV : BasePageValidator<TM>, new()
+    {
+        public TV Validate()
+        {
+            return new TV();
+        }
+    }
 }
 
