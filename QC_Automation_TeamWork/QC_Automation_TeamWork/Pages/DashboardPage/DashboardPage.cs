@@ -22,5 +22,22 @@ namespace QC_Automation_TeamWork.Pages.DashboardPage
         {
             return Map.HomePageHeading.Text;
         }
+
+        internal void Logout()
+        {
+            Map.LogoutButton.Click();
+        }
+
+        //private string pageUrl = "https://www.opencart.com/index.php?route=cms/demo/";
+
+        //internal void Navigate()
+        //{
+        //    Driver.Browser.Navigate().GoToUrl(pageUrl);
+        //}
+
+        internal string AdminHeader()
+        {
+            return Map.AdminHeader.Text;
+        }
     }
 }

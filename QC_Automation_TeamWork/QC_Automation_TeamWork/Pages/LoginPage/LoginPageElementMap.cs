@@ -17,7 +17,7 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
         {
             get
             {
-                return GetElement(By.Id("input-password"));
+                return GetElement(By.Id("input-username"));
             }
         }
 
@@ -26,6 +26,14 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
             get
             {
                 return GetElement(By.CssSelector("button.btn"));
+            }
+        }
+
+        public IWebElement LoginPanelTitle
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='content']/div/div/div/div/div[1]/h1"));
             }
         }
     }
