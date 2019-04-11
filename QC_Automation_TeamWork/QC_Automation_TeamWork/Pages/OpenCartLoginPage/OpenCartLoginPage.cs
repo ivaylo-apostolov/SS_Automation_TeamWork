@@ -1,9 +1,11 @@
 ﻿using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data.Models;
+using QC_Automation_TeamWork.Pages.OpenCartPinSecurityCheckPage;
+using System.Threading;
 
 namespace QC_Automation_TeamWork.Pages.LoginPage
 {
-    public class LoginPage : BasePage<LoginPageElementMap, LoginPageValidator>
+    public class OpenCartLoginPage : BasePage<OpenCartLoginPageElementMap, OpenCartLoginPageValidator>
     {
         private string pageURL = "https://demo.opencart.com/admin/";
 
@@ -12,12 +14,12 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
             Driver.Browser.Navigate().GoToUrl(pageURL);
         }
 
-        internal void TypeUsername(string username)
+        internal void TypeEmail(string username)
         {
-            var usernameElement = Map.UsernameElement;
+            var usernameElement = Map.EmailElement;
             usernameElement.Clear();
             usernameElement.SendKeys(username);
-        }            
+        }
 
         internal void TypePassword(string password)
         {
@@ -31,23 +33,15 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
             Map.LoginButton.Click();
         }
 
-        public DashboardPage Login(User user)
+
+        public PinSecurityCheckPage Login(LoginWithEmail email)
         {
-            TypeUsername(user.Username);
-            TypePassword(user.Password);
+            TypeEmail(email.Email);
+            TypePassword(email.Password);
+
             ClickLoginButton();
 
-            return new DashboardPage();
-        }
-
-        public string GetUsernameInputValue()
-        {
-            return Map.UsernameElement.GetAttribute("value");
-        }
-
-        public string GetLoginPanelTitleText()
-        {
-            return Map.LoginPanelTitle.Text;
+            return new PinSecurityCheckPage();
         }
     }
 }

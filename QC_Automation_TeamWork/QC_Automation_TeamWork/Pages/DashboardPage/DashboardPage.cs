@@ -1,31 +1,24 @@
 ﻿using System;
-using QC_Automation_TeamWork.Pages.DashboardPage;
 using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
 
-namespace QC_Automation_TeamWork.Pages.DashboardPage
+namespace QC_Automation_TeamWork.Pages
 {
-    public class DashboardPage : BasePage<DashboardPageElementMap>
+    public class DashboardPage : BasePage<DashboardPageElementMap, DashboardPageValidator>
     {
         public string GetLoggedUserFullName()
         {
-            var loggedUserName = Driver.Browser.FindElement(By.XPath("//a[contains(text(),'demo demo ')]"));
-            return loggedUserName.Text;
+            return "abv";
         }
-
-        internal void OpenCart()
+           
+        internal void ClickOpenCartLink()
         {
             Map.OpenCartLink.Click();
         }
 
-        public string GetHomePageHeadingText()
-        {
-            return Map.HomePageHeading.Text;
-        }
-
         internal void Logout()
         {
-            Map.LogoutButton.Click();
+            throw new NotImplementedException();
         }
 
         //private string pageUrl = "https://www.opencart.com/index.php?route=cms/demo/";

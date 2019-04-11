@@ -35,7 +35,6 @@ namespace QC_Automation_TeamWork.Pages.DemoAdminPage
             Map.Password.SendKeys("demo");
         }
 
-
         internal void EnterLogInButton()
         {
             Map.LogInButton.Click();

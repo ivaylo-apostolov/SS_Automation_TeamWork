@@ -1,8 +1,7 @@
 ﻿using QC_Automation_TeamWork.Core;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 
-namespace QC_Automation_TeamWork.Pages.DashboardPage
+namespace QC_Automation_TeamWork.Pages
 {
     public class DashboardPageElementMap : BasePageElementMap
     {
@@ -12,15 +11,7 @@ namespace QC_Automation_TeamWork.Pages.DashboardPage
             {
                 return GetElement(By.XPath("//*[@id='footer']/a"));
             }
-        }
-
-        public IWebElement HomePageHeading
-        {
-            get
-            {
-                return GetElement(By.CssSelector("h1"));
-            }
-        }
+        }       
 
         public IWebElement LogoutButton
         {
@@ -31,7 +22,6 @@ namespace QC_Automation_TeamWork.Pages.DashboardPage
         }
 
         public IWebElement AdminHeader
-
         {
             get
             {

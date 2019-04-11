@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Data;
 
 namespace QC_Automation_TeamWork.Pages.PageComponents.Navigation.Catalog.Products
 {
-    class ProductsValidator
+    public class ProductsValidator : BasePageValidator<ProductsElementMap>
     {
+        internal void SuccessfulClickOnProductsButton()
+        {
+            Assert.AreEqual(TestData.ProductsHomePageTitle, Map.ProductsHomePageHeading.Text);
+        }
+
+        internal void SuccessfulFilterResult()
+        {
+            Assert.AreEqual(TestData.ModelFilterResultField, Map.ModelFilterResultField.Text);
+        }
     }
-}
+ }

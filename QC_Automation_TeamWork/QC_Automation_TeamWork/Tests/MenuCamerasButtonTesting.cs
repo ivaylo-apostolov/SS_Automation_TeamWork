@@ -103,10 +103,11 @@ namespace QC_Automation_TeamWork.Tests
 
             var productComparePage = new StoreProductComparePage();
 
-            var product = TestData.Product;
+            var firstProduct = TestData.ProductMacBook;
+            var secondProduct = TestData.ProductIPhone;
 
-            productComparePage.Validate().FirstProduct(product.StoreFirstProductName);
-            productComparePage.Validate().SecondProduct(product.StoreSecondtProductName);
+            productComparePage.Validate().FirstProduct(firstProduct.Productname);
+            productComparePage.Validate().SecondProduct(secondProduct.Productname);
         }
     }
 }

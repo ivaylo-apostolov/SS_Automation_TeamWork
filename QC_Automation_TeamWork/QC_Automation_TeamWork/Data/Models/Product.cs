@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace QC_Automation_TeamWork.Data.Models
 {
     public class Product
     {
-        public Product(string firstProduct, string secondProduct)
+        public Product(string productname)
         {
-            this.StoreFirstProductName = firstProduct;
-            this.StoreSecondtProductName = secondProduct;
+            Productname = productname;
         }
 
-        public string StoreFirstProductName { get; set; }
+        public string Productname { get; set; }
 
-        public string StoreSecondtProductName { get; set; }
+        public bool CompareWithAnotherProduct(Product anotherProduct)
+        {
+            return this.Productname == anotherProduct.Productname;
+        }
     }
 }
