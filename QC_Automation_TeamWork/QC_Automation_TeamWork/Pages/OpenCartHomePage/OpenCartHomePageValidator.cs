@@ -15,5 +15,10 @@ namespace QC_Automation_TeamWork.Pages.OpenCartHomePage
         {
             Assert.AreEqual(TestData.OpenCartHomePageHeading, Map.OpenCartLink.Text);
         }
+
+        internal void SuccessfullOpenCartLink()
+        {
+            Assert.AreEqual(TestData.OpenCartHomePageHeading, Map.HomePageHeading.Text);
+        }
     }
 }

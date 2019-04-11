@@ -60,6 +60,8 @@
     <Compile Include="Core\BaseTest.cs" />
     <Compile Include="Core\Driver.cs" />
     <Compile Include="Data\Models\LoginWithEmail.cs" />
+    <Compile Include="Data\Models\Model.cs" />
+    <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\User.cs" />
     <Compile Include="Data\TestData.cs" />
     <Compile Include="Pages\AccountPage\AccountPage.cs" />
@@ -102,6 +104,7 @@
     <Compile Include="Tests\Test01DashboardPageOpenCartLink.cs" />
     <Compile Include="Tests\Test01LoginAsAdmin.cs" />
     <Compile Include="Tests\Test02LogoutAsAdmin.cs" />
+    <Compile Include="Tests\Test02ProductFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

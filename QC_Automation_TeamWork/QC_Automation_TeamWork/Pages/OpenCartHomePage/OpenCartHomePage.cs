@@ -1,4 +1,5 @@
 ﻿using QC_Automation_TeamWork.Core;
+
 using QC_Automation_TeamWork.Pages.LoginPage;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,5 @@ namespace QC_Automation_TeamWork.Pages.OpenCartHomePage
 
             return new OpenCartLoginPage();
         }
-
     }
 }
