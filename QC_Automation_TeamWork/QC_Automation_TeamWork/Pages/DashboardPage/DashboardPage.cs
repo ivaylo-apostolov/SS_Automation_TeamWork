@@ -40,5 +40,11 @@ namespace QC_Automation_TeamWork.Pages
         {
             return Map.AdminHeader.Text;
         }
+
+        public DashboardPage GoToOrders()
+        {
+            Map.OrdersPage.Click();
+            return new DashboardPage();
+        }
     }
 }

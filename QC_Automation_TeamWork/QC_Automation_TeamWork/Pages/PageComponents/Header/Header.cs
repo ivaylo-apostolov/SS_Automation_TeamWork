@@ -1,4 +1,6 @@
 ﻿using QC_Automation_TeamWork.Core;
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -27,6 +29,19 @@ namespace QC_Automation_TeamWork.Pages
         {
             OpenProfileMenu();
             Map.YourProfileLink.Click();
+
+            return new ProfilePage();
+        }
+
+        public ProfilePage NavigateToSupportForum()
+        {
+            OpenProfileMenu();
+            Map.OpenSupportForum.Click();
+
+            ReadOnlyCollection<string> windowHandles = driver.WindowHandles;
+            string firstTab = windowHandles.First();
+            string lastTab = windowHandles.Last();
+            driver.SwitchTo().Window(lastTab);
 
             return new ProfilePage();
         }

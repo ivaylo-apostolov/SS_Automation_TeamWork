@@ -13,8 +13,8 @@ namespace QC_Automation_TeamWork.Tests
         public void LoginAsAdmin()
         {
             var loginPage = new LoginPage();
-            loginPage.Navigate();
 
+            loginPage.Navigate();
             loginPage.Validate().LoginForm();
 
             var user = TestData.User;

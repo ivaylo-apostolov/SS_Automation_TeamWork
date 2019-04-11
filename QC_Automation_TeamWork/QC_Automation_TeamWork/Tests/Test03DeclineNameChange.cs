@@ -2,7 +2,6 @@
 using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data;
 using QC_Automation_TeamWork.Pages;
-using System.Threading;
 
 namespace QC_Automation_TeamWork.Tests
 {
@@ -14,8 +13,8 @@ namespace QC_Automation_TeamWork.Tests
         public void DeclineNameChange()
         {
             var loginPage = new LoginPage();
-            loginPage.Navigate();
 
+            loginPage.Navigate();
             loginPage.Validate().LoginForm();
 
             var user = TestData.User;
