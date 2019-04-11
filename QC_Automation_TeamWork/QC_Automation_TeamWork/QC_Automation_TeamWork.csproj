@@ -89,6 +89,9 @@
     <Compile Include="Pages\PageComponents\Navigation\Navigation.cs" />
     <Compile Include="Pages\PageComponents\Navigation\NavigationElementMap.cs" />
     <Compile Include="Pages\PageComponents\Navigation\NavigationValidator.cs" />
+    <Compile Include="Pages\RequestNewPasswordPage\RequestNewPasswordPage.cs" />
+    <Compile Include="Pages\RequestNewPasswordPage\RequestNewPasswordPageElementMap.cs" />
+    <Compile Include="Pages\RequestNewPasswordPage\RequestNewPasswordPageValidator.cs" />
     <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageValidator.cs" />
     <Compile Include="Tests\DemoAdminLogin.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPage.cs" />

@@ -1,12 +1,13 @@
-﻿using System;
+using System;
 using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
 
-namespace QC_Automation_TeamWork.Pages.DashboardPage 
+
+namespace QC_Automation_TeamWork.Pages
 {
     public class DashboardPage : BasePage<DashboardPageElementMap, DashboardPageValidator>
     {
-        public string GetLoggedUserFullName()
+       // public string GetLoggedUserFullName()
 
            
         internal void ClickOpenCartLink()
@@ -21,11 +22,6 @@ namespace QC_Automation_TeamWork.Pages.DashboardPage
         }
 
         internal string GetLoggedUserFullName()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal string AdminHeader()
         {
             throw new NotImplementedException();
         }

@@ -1,11 +1,7 @@
 ﻿using QC_Automation_TeamWork.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace QC_Automation_TeamWork.Pages.OpenCartPinSecurityCheckPage
+
+namespace QC_Automation_TeamWork.Pages
 {
     public class PinSecurityCheckPage : BasePage<PinSecurityCheckPageElementMap, PinSecurityCheckPageValidator>
     {
@@ -16,11 +12,11 @@ namespace QC_Automation_TeamWork.Pages.OpenCartPinSecurityCheckPage
             PincodeElement.SendKeys(pincode);
         }
 
-        public AccountPage.AccountPage ContinueButtonClick()
+        public AccountPage ContinueButtonClick()
         {
             Map.ContinueButton.Click();
 
-            return new AccountPage.AccountPage();
+            return new AccountPage();
         }
     }
 

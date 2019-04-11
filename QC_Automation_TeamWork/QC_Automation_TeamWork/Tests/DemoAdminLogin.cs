@@ -1,12 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QC_Automation_TeamWork.Core;
-using QC_Automation_TeamWork.Data;
-using QC_Automation_TeamWork.Pages.DemoAdminPage;
-using System.Threading;
-using QC_Automation_TeamWork.Pages.DashboardPage;
-using QC_Automation_TeamWork.Pages.OpenCartHomePage;
-using QC_Automation_TeamWork.Pages.LoginPage;
-
+using QC_Automation_TeamWork.Pages;
 
 namespace QC_Automation_TeamWork.Tests
 {
@@ -42,13 +36,30 @@ namespace QC_Automation_TeamWork.Tests
             var openCartHomePage = new OpenCartHomePage();
             openCartHomePage.Navigate();
             var openCartLoginPage = openCartHomePage.ClickLoginButton();
-            var pinSecurityCheckPage =openCartLoginPage.Login(new Data.Models.LoginWithEmail("mad17@abv.bg", "englisc"));
+            var pinSecurityCheckPage = openCartLoginPage.Login(new Data.Models.LoginWithEmail("mad17@abv.bg", "englisc"));
 
             pinSecurityCheckPage.TypePincode("1717");
-            var accountPage= pinSecurityCheckPage.ContinueButtonClick();
+            var accountPage = pinSecurityCheckPage.ContinueButtonClick();
 
             accountPage.Validate().SuccessfulLogin();
         }
+        [TestCategory("MadlenaTests")]
+        [TestMethod]
+        public void Test04RequestNewPassword()
+        {
+            var openCartHomePage = new OpenCartHomePage();
+            openCartHomePage.Navigate();
+            var openCartLoginPage = openCartHomePage.ClickLoginButton();
+
+            openCartLoginPage.ClickForgotPasswordLink();
+
+            var requestNewPasswordPage = new RequestNewPasswordPage();
+            requestNewPasswordPage.RequestNewPassword("mad17@abv.bg");
+
+            openCartLoginPage.Validate().ResetPasswordMessage();
+        }
     }
 }
+
+
 

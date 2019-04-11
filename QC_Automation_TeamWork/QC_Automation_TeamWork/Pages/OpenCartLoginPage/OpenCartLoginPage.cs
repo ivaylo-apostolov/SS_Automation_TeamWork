@@ -1,9 +1,8 @@
 ﻿using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data.Models;
-using QC_Automation_TeamWork.Pages.OpenCartPinSecurityCheckPage;
-using System.Threading;
 
-namespace QC_Automation_TeamWork.Pages.LoginPage
+
+namespace QC_Automation_TeamWork.Pages
 {
     public class OpenCartLoginPage : BasePage<OpenCartLoginPageElementMap, OpenCartLoginPageValidator>
     {
@@ -32,8 +31,6 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
         {
             Map.LoginButton.Click();
         }
-
-
         public PinSecurityCheckPage Login(LoginWithEmail email)
         {
             TypeEmail(email.Email);
@@ -43,5 +40,14 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
 
             return new PinSecurityCheckPage();
         }
+
+        internal void ClickForgotPasswordLink()
+        {
+            Map.ForgottenPasswordElement.Click();
+        }
     }
 }
+    
+
+
+
