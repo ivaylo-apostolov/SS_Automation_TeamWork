@@ -19,6 +19,14 @@ namespace QC_Automation_TeamWork.Data
             }
         }
 
+        public static User UserForNameChange
+        {
+            get
+            {
+                return new User("Mladen", "Varbev");
+            }
+        }
+
         public static string UserFullName
         {
             get
@@ -48,6 +56,15 @@ namespace QC_Automation_TeamWork.Data
             get
             {
                 return "Please enter your login details.";
+            }
+        }
+
+        public static string WarningMessage
+        {
+            get
+            {
+                return @"Warning: You do not have permission to modify your profile!
+×";
             }
         }
     }

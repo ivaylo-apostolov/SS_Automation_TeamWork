@@ -1,6 +1,4 @@
 ﻿using QC_Automation_TeamWork.Core;
-using OpenQA.Selenium;
-using QC_Automation_TeamWork.Pages.PageComponents.Header;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -20,18 +18,18 @@ namespace QC_Automation_TeamWork.Pages
             return new LoginPage();
         }
 
-        public void OpenProfileMenu()
+        internal void OpenProfileMenu()
         {
             Map.UserProfileName.Click();
         }
 
-        //public ProfilePage NavigateToUserProfile()
-        //{
-        //    OpenProfileMenu();
-        //    Map.YourProfileLink.Click();
+        public ProfilePage NavigateToUserProfile()
+        {
+            OpenProfileMenu();
+            Map.YourProfileLink.Click();
 
-        //    return new ProfilePage()
-        //}
+            return new ProfilePage();
+        }
 
     }
 }

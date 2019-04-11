@@ -1,7 +1,7 @@
 ﻿using QC_Automation_TeamWork.Core;
 using OpenQA.Selenium;
 
-namespace QC_Automation_TeamWork.Pages.PageComponents.Header
+namespace QC_Automation_TeamWork.Pages
 {
     public class HeaderElementMap : BasePageElementMap
     {
@@ -14,7 +14,26 @@ namespace QC_Automation_TeamWork.Pages.PageComponents.Header
             }
 
         }
-        public IWebElement UserProfileName { get; internal set; }
-        public IWebElement YourProfileLink { get; internal set; }
+        public IWebElement UserProfileName
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='header']/div/ul/li[1]/a"));
+            }
+        }
+        public IWebElement YourProfileLink
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='header']/div/ul/li[1]/ul/li[1]/a"));
+            }
+        }
+        public IWebElement OpenSupportForum
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='header']/div/ul/li[1]/ul/li[9]/a"));
+            }
+        }
     }
 }

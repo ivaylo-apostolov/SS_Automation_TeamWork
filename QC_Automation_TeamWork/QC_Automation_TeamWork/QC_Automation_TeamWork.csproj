@@ -81,6 +81,9 @@
     <Compile Include="Pages\PageComponents\Navigation\Navigation.cs" />
     <Compile Include="Pages\PageComponents\Navigation\NavigationElementMap.cs" />
     <Compile Include="Pages\PageComponents\Navigation\NavigationValidator.cs" />
+    <Compile Include="Pages\ProfilePage\ProfilePage.cs" />
+    <Compile Include="Pages\ProfilePage\ProfilePageElementMap.cs" />
+    <Compile Include="Pages\ProfilePage\ProfilePageValidator.cs" />
     <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageValidator.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPage.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageElementMap.cs" />
@@ -93,6 +96,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Test01LoginAsAdmin.cs" />
     <Compile Include="Tests\Test02LogoutAsAdmin.cs" />
+    <Compile Include="Tests\Test03DeclineNameChange.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
