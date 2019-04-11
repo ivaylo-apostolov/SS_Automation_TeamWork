@@ -1,7 +1,3 @@
-﻿using QC_Automation_TeamWork.Core;
-using QC_Automation_TeamWork.Pages.PageComponents.Navigation.Catalog.Products;
-using System.Collections.ObjectModel;
-
 namespace QC_Automation_TeamWork.Data.Models
 {
     public class Product
@@ -12,6 +8,10 @@ namespace QC_Automation_TeamWork.Data.Models
         }
 
         public string Productname { get; set; }
+
+        public bool CompareWithAnotherProduct(Product anotherProduct)
+        {
+            return this.Productname == anotherProduct.Productname;
+        }
     }
 }
-

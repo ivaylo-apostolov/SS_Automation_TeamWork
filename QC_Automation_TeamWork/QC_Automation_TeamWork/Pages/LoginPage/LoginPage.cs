@@ -31,13 +31,13 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
             Map.LoginButton.Click();
         }
 
-        public DashboardPage.DashboardPage Login(User user)
+        public DashboardPage Login(User user)
         {
             TypeUsername(user.Username);
             TypePassword(user.Password);
             ClickLoginButton();
 
-            return new DashboardPage.DashboardPage();
+            return new DashboardPage();
         }
 
         public string GetUsernameInputValue()

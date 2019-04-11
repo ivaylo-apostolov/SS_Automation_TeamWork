@@ -1,12 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QC_Automation_TeamWork.Core;
-using QC_Automation_TeamWork.Data;
+using QC_Automation_TeamWork.Pages;
 using QC_Automation_TeamWork.Pages.DemoAdminPage;
-using System.Threading;
-using QC_Automation_TeamWork.Pages.DashboardPage;
 using QC_Automation_TeamWork.Pages.OpenCartHomePage;
-using QC_Automation_TeamWork.Pages.LoginPage;
-
 
 namespace QC_Automation_TeamWork.Tests
 {
