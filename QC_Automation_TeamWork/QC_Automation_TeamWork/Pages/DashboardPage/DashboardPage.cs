@@ -5,8 +5,12 @@ using QC_Automation_TeamWork.Core;
 namespace QC_Automation_TeamWork.Pages.DashboardPage 
 {
     public class DashboardPage : BasePage<DashboardPageElementMap, DashboardPageValidator>
-    {          
+    {
+        public string GetLoggedUserFullName()
+
+           
         internal void ClickOpenCartLink()
+
         {
             Map.OpenCartLink.Click();
         }
