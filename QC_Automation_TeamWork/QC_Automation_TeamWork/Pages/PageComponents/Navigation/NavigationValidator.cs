@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Data;
 
 namespace QC_Automation_TeamWork.Pages.PageComponents.Navigation
 {
-    class NavigationValidator
+    public class NavigationValidator : BasePageValidator<NavigationElementMap>
     {
+        internal void SuccessfulClickOnCatalog()
+        {
+            Assert.AreEqual(TestData.ProductsButtonDefaultName, Map.ProductsButton.Text);
+        }              
     }
 }

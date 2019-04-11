@@ -9,7 +9,7 @@ namespace QC_Automation_TeamWork.Core
     {
         private static IWebDriver browser;
         private static WebDriverWait browserWait;
-        private const int defaultExplicitWait = 15;
+        private const int defaultExplicitWait = 10;
 
         public static IWebDriver Browser
         {
@@ -33,7 +33,7 @@ namespace QC_Automation_TeamWork.Core
             {
                 if (browser == null || browserWait == null)
                 {
-                    throw new NullReferenceException("WebDriver is not started or Wait object is not initialized!");
+                    throw new NullReferenceException("WebDriver is not started or Wait object is not initialized");
                 }
 
                 return browserWait;
@@ -44,15 +44,15 @@ namespace QC_Automation_TeamWork.Core
             }
         }
 
-        internal static void StartBrowser()
+        public static void StartBrowser(int defaultTimeout = defaultExplicitWait)
         {
             Browser = new ChromeDriver();
-            Browser.Manage().Window.FullScreen();
+            Browser.Manage().Window.Maximize();
 
-            BrowserWait = new WebDriverWait(Browser, TimeSpan.FromSeconds(defaultExplicitWait));
+            BrowserWait = new WebDriverWait(Browser, TimeSpan.FromSeconds(defaultTimeout));
         }
 
-        internal static void StopBrowser()
+        public static void StopBrowser()
         {
             Browser.Quit();
             Browser = null;

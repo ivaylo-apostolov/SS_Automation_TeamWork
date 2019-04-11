@@ -59,6 +59,8 @@
     <Compile Include="Core\BasePageValidator.cs" />
     <Compile Include="Core\BaseTest.cs" />
     <Compile Include="Core\Driver.cs" />
+    <Compile Include="Data\Models\Model.cs" />
+    <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\User.cs" />
     <Compile Include="Data\TestData.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageValidator.cs" />
@@ -69,9 +71,7 @@
     <Compile Include="Pages\LoginPage\LoginPageValidator.cs" />
     <Compile Include="Pages\OpenCartHomePage\OpenCartHomePage.cs" />
     <Compile Include="Pages\OpenCartHomePage\OpenCartHomePageElementMap.cs" />
-    <Compile Include="Pages\PageComponents\Navigation\Catalog\Catalog.cs" />
-    <Compile Include="Pages\PageComponents\Navigation\Catalog\CatalogElementMap.cs" />
-    <Compile Include="Pages\PageComponents\Navigation\Catalog\CatalogValidator.cs" />
+    <Compile Include="Pages\OpenCartHomePage\OpenCartHomePageValidator.cs" />
     <Compile Include="Pages\PageComponents\Navigation\Catalog\Products\Products.cs" />
     <Compile Include="Pages\PageComponents\Navigation\Catalog\Products\ProductsElementMap.cs" />
     <Compile Include="Pages\PageComponents\Navigation\Catalog\Products\ProductsValidator.cs" />
@@ -93,6 +93,7 @@
     <Compile Include="Tests\Test01DashboardPageOpenCartLink.cs" />
     <Compile Include="Tests\Test01LoginAsAdmin.cs" />
     <Compile Include="Tests\Test02LogoutAsAdmin.cs" />
+    <Compile Include="Tests\Test02ProductFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
