@@ -50,6 +50,70 @@ namespace QC_Automation_TeamWork.Data
                 return "Please enter your login details.";
             }
         }
+
+        public static string ProductsButtonDefaultName
+        {
+            get
+            {
+                return "Products";
+            }
+        }
+
+        public static string ProductsHomePageTitle
+        {
+            get
+            {
+                return "Products";
+            }
+        }
+
+        public static string ProductsNameFieldTitle
+        {
+            get
+            {
+                return "Product Name";
+            }
+        }
+
+        public static Product Product
+        {
+            get
+            {
+                return new Product("Apple");
+            }
+        }
+
+        public static string ModelFieldTitle
+        {
+            get
+            {
+                return "Model";
+            }
+        }
+
+        public static Model Model
+        {
+            get
+            {
+                return new Model("Product 15");
+            }
+        }
+
+        public static string FilterButtonTitle
+        {
+            get
+            {
+                return " Filter";
+            }
+        }
+
+        public static string ModelFilterResultField
+        {
+            get
+            {
+                return "Product 15";
+            }
+        }
     }
 }
     

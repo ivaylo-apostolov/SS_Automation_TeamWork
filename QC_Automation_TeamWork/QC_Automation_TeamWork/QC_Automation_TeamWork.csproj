@@ -53,20 +53,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\BaseComponent.cs" />
     <Compile Include="Core\BasePage.cs" />
     <Compile Include="Core\BasePageElementMap.cs" />
+    <Compile Include="Core\BasePageValidator.cs" />
     <Compile Include="Core\BaseTest.cs" />
     <Compile Include="Core\Driver.cs" />
+    <Compile Include="Data\Models\Model.cs" />
+    <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\User.cs" />
     <Compile Include="Data\TestData.cs" />
-    <Compile Include="Pages\Dashboard\DashboardPage.cs" />
-    <Compile Include="Pages\Dashboard\DashboardPageElementMap.cs" />
+    <Compile Include="Pages\DashboardPage\DashboardPageValidator.cs" />
     <Compile Include="Pages\DemoAdminPage\DemoAdminPage.cs" />
     <Compile Include="Pages\DemoAdminPage\DemoAdminPageElementMap.cs" />
     <Compile Include="Pages\DemoPage\DemoPage.cs" />
     <Compile Include="Pages\DemoPage\DemoPageElementMap.cs" />
+    <Compile Include="Pages\LoginPage\LoginPageValidator.cs" />
     <Compile Include="Pages\OpenCartHomePage\OpenCartHomePage.cs" />
     <Compile Include="Pages\OpenCartHomePage\OpenCartHomePageElementMap.cs" />
+    <Compile Include="Pages\OpenCartHomePage\OpenCartHomePageValidator.cs" />
+    <Compile Include="Pages\PageComponents\Navigation\Catalog\Products\Products.cs" />
+    <Compile Include="Pages\PageComponents\Navigation\Catalog\Products\ProductsElementMap.cs" />
+    <Compile Include="Pages\PageComponents\Navigation\Catalog\Products\ProductsValidator.cs" />
+    <Compile Include="Pages\PageComponents\Navigation\Navigation.cs" />
+    <Compile Include="Pages\PageComponents\Navigation\NavigationElementMap.cs" />
+    <Compile Include="Pages\PageComponents\Navigation\NavigationValidator.cs" />
     <Compile Include="Tests\DemoAdminLogin.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPage.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageElementMap.cs" />
@@ -81,10 +92,12 @@
     <Compile Include="Tests\Test01DashboardPageOpenCartLink.cs" />
     <Compile Include="Tests\Test01LoginAsAdmin.cs" />
     <Compile Include="Tests\Test02LogoutAsAdmin.cs" />
+    <Compile Include="Tests\Test02ProductFilter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

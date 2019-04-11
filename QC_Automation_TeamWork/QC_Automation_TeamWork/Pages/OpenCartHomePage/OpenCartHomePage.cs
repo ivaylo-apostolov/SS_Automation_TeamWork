@@ -1,13 +1,9 @@
 ﻿using QC_Automation_TeamWork.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace QC_Automation_TeamWork.Pages.OpenCartHomePage
 {
-    public class OpenCartHomePage : BasePage<OpenCartHomePageElementMap>
+    public class OpenCartHomePage : BasePage<OpenCartHomePageElementMap, OpenCartHomePageValidator>
     {
         private string pageUrl = "https://www.opencart.com/";
 
@@ -20,5 +16,7 @@ namespace QC_Automation_TeamWork.Pages.OpenCartHomePage
         {
             Map.DemoHeader.Click();
         }
+
+
     }
 }

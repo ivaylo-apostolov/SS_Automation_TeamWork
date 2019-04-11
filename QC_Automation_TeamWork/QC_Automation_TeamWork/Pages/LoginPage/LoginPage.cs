@@ -3,7 +3,7 @@ using QC_Automation_TeamWork.Data.Models;
 
 namespace QC_Automation_TeamWork.Pages.LoginPage
 {
-    public class LoginPage : BasePage<LoginPageElementMap>
+    public class LoginPage : BasePage<LoginPageElementMap, LoginPageValidator>
     {
         private string pageURL = "https://demo.opencart.com/admin/";
 
@@ -17,7 +17,7 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
             var usernameElement = Map.UsernameElement;
             usernameElement.Clear();
             usernameElement.SendKeys(username);
-        }
+        }            
 
         internal void TypePassword(string password)
         {
