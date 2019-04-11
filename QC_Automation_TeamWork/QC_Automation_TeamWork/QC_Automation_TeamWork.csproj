@@ -59,6 +59,7 @@
     <Compile Include="Core\BasePageValidator.cs" />
     <Compile Include="Core\BaseTest.cs" />
     <Compile Include="Core\Driver.cs" />
+    <Compile Include="Data\Models\Product.cs" />
     <Compile Include="Data\Models\User.cs" />
     <Compile Include="Data\TestData.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageValidator.cs" />
@@ -79,6 +80,19 @@
     <Compile Include="Pages\PageComponents\Navigation\NavigationElementMap.cs" />
     <Compile Include="Pages\PageComponents\Navigation\NavigationValidator.cs" />
     <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageValidator.cs" />
+    <Compile Include="Pages\StoreContactUsPage\StoreContactUsPage.cs" />
+    <Compile Include="Pages\StoreContactUsPage\StoreContactUsPageElementMap.cs" />
+    <Compile Include="Pages\StoreContactUsPage\StoreContactUsPageValidator.cs" />
+    <Compile Include="Pages\StoreHomePage\StoreHomePageValidator.cs" />
+    <Compile Include="Pages\StoreProductComparePage\StoreProductComparePage.cs" />
+    <Compile Include="Pages\StoreProductComparePage\StoreProductComparePageElementMap.cs" />
+    <Compile Include="Pages\StoreProductComparePage\StoreProductComparePageValidator.cs" />
+    <Compile Include="Pages\StoreSearchPage\StoreSearchResultPage.cs" />
+    <Compile Include="Pages\StoreSearchPage\StoreSearchResultPageElementMap.cs" />
+    <Compile Include="Pages\StoreSearchPage\StoreSearchResultPageValidator.cs" />
+    <Compile Include="Pages\StoreSuccessContactPage\StoreSuccessContactPage.cs" />
+    <Compile Include="Pages\StoreSuccessContactPage\StoreSuccessContactPageElementMap.cs" />
+    <Compile Include="Pages\StoreSuccessContactPage\StoreSuccessContactPageValidator.cs" />
     <Compile Include="Tests\DemoAdminLogin.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPage.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageElementMap.cs" />

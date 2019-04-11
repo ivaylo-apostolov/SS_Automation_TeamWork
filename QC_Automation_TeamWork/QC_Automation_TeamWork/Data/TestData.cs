@@ -11,11 +11,28 @@ namespace QC_Automation_TeamWork.Data
                 return "Cameras";
             }
         }
+
+        public static string SearchText
+        {
+            get
+            {
+                return "iPhone";
+            }
+        }
+
         public static User User
         {
             get
             {
                 return new User("demo", "demo");
+            }
+        }
+
+        public static Product Product
+        {
+            get
+            {
+                return new Product("MacBook", "iPhone");
             }
         }
 
@@ -50,7 +67,65 @@ namespace QC_Automation_TeamWork.Data
                 return "Please enter your login details.";
             }
         }
+
+        public static string ExpectedTotalPrice
+        {
+            get
+            {
+                return "$725.20";
+            }
+        }
+
+        public static string ExpectedFirstItem
+        {
+            get
+            {
+                return "iPhone";
+            }
+        }
+
+        public static string ExpectedSecondItem
+        {
+            get
+            {
+                return "MacBook";
+            }
+        }
+
+        public static string ExpectedContactUsHeader
+        {
+            get
+            {
+                return "Contact Us";
+            }
+        }
+
+        public static string NameInContactUsForm
+        {
+            get
+            {
+                return "Ivaylo Apostolov";
+            }
+        }
+
+        public static string EmailInContactUsForm
+        {
+            get
+            {
+                return "ivaylo.apostolov@gmail.com";
+            }
+        }
+
+        public static string EnquiryTextInContactUsForm
+        {
+            get
+            {
+                return "This is a test";
+            }
+        }
+
+        
     }
 }
-    
+
 
