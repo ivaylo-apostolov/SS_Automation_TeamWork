@@ -20,5 +20,5 @@ namespace QC_Automation_TeamWork.Pages.PageComponents.Navigation
                 return GetElement(By.XPath("//*[@id='collapse1']/li[2]/a"));
             }
         }
-    }
-}
+     }
+ }

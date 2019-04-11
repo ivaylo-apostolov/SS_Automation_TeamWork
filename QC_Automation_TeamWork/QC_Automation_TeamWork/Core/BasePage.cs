@@ -20,7 +20,6 @@ namespace QC_Automation_TeamWork.Core
         where TM : BasePageElementMap, new()
         where TV : BasePageValidator<TM>, new()
     {
-       
         public TV Validate()
         {
             return new TV();

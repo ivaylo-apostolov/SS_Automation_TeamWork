@@ -10,5 +10,4 @@ namespace QC_Automation_TeamWork.Pages.PageComponents.Navigation
             Map.CatalogDropDownMenuButton.Click();
         }        
     }
-
 }

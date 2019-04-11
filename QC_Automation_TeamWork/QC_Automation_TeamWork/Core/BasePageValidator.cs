@@ -1,4 +1,3 @@
-﻿
 namespace QC_Automation_TeamWork.Core
 {
     public class BasePageValidator<TM> where TM : BasePageElementMap, new()

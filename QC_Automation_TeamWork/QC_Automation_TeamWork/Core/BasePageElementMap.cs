@@ -25,7 +25,8 @@ namespace QC_Automation_TeamWork.Core
                 return Browser.FindElement(by);
             }
 
-            throw new ElementNotVisibleException($"Element with locator {by.ToString()} is not visible");            
+            throw new ElementNotVisibleException($"Element with locator {by.ToString()} is not visible"); 
+          
         }
 
         public IReadOnlyCollection<IWebElement> GetElements (By by)
