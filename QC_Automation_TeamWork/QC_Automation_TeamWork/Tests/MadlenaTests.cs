@@ -1,23 +1,21 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Data;
 using QC_Automation_TeamWork.Pages;
 
 namespace QC_Automation_TeamWork.Tests
 {
     [TestClass]
-    public class DemoAdminLogin : BaseTest
+    public class MadlenaTests : BaseTest
     {
         [TestCategory("MadlenaTests")]
         [TestMethod]
         public void Test01LogInToDemoAsAdmin()
         {
-            var demoAdminPage = new DemoAdminPage();
-            demoAdminPage.Navigate();
-            demoAdminPage.FillinLogingForm();
-            demoAdminPage.EnterLogInButton();
-
-            var dashboardPage = new DashboardPage();
-            dashboardPage.Validate().SuccessfulLogin();
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+            var dashboard = loginPage.Login(TestData.User);
+            dashboard.Validate().SuccessfulLogin();
         }
 
         [TestCategory("MadlenaTests")]
@@ -43,6 +41,7 @@ namespace QC_Automation_TeamWork.Tests
 
             accountPage.Validate().SuccessfulLogin();
         }
+
         [TestCategory("MadlenaTests")]
         [TestMethod]
         public void Test04RequestNewPassword()
