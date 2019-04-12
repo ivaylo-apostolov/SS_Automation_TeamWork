@@ -68,8 +68,9 @@
     <Compile Include="Pages\AccountPage\AccountPageElementMap.cs" />
     <Compile Include="Pages\AccountPage\AccountPageValidator.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageValidator.cs" />
-    <Compile Include="Pages\DemoAdminPage\DemoAdminPage.cs" />
-    <Compile Include="Pages\DemoAdminPage\DemoAdminPageElementMap.cs" />
+    <Compile Include="Pages\IphoneReviewPage\IphoneReviewPage.cs" />
+    <Compile Include="Pages\IphoneReviewPage\IphoneReviewPageElementMap.cs" />
+    <Compile Include="Pages\IphoneReviewPage\IphoneReviewPageValidator.cs" />
     <Compile Include="Pages\OpenCartLoginPage\OpenCartLoginPage.cs" />
     <Compile Include="Pages\OpenCartLoginPage\OpenCartLoginPageElementMap.cs" />
     <Compile Include="Pages\OpenCartLoginPage\OpenCartLoginPageValidator.cs" />
@@ -89,7 +90,11 @@
     <Compile Include="Pages\PageComponents\Navigation\Navigation.cs" />
     <Compile Include="Pages\PageComponents\Navigation\NavigationElementMap.cs" />
     <Compile Include="Pages\PageComponents\Navigation\NavigationValidator.cs" />
+    <Compile Include="Pages\RequestNewPasswordPage\RequestNewPasswordPage.cs" />
+    <Compile Include="Pages\RequestNewPasswordPage\RequestNewPasswordPageElementMap.cs" />
+    <Compile Include="Pages\RequestNewPasswordPage\RequestNewPasswordPageValidator.cs" />
     <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageValidator.cs" />
+    <Compile Include="Tests\MadlenaTests.cs" />
     <Compile Include="Pages\StoreContactUsPage\StoreContactUsPage.cs" />
     <Compile Include="Pages\StoreContactUsPage\StoreContactUsPageElementMap.cs" />
     <Compile Include="Pages\StoreContactUsPage\StoreContactUsPageValidator.cs" />
@@ -103,7 +108,6 @@
     <Compile Include="Pages\StoreSuccessContactPage\StoreSuccessContactPage.cs" />
     <Compile Include="Pages\StoreSuccessContactPage\StoreSuccessContactPageElementMap.cs" />
     <Compile Include="Pages\StoreSuccessContactPage\StoreSuccessContactPageValidator.cs" />
-    <Compile Include="Tests\DemoAdminLogin.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPage.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageElementMap.cs" />
     <Compile Include="Pages\LoginPage\LoginPage.cs" />

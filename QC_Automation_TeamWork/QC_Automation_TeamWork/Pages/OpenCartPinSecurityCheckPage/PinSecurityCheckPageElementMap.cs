@@ -1,6 +1,10 @@
 ﻿using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> Madlen_feature
 namespace QC_Automation_TeamWork.Pages
 {
     public class PinSecurityCheckPageElementMap : BasePageElementMap

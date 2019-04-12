@@ -1,7 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QC_Automation_TeamWork.Core;
-using QC_Automation_TeamWork.Data;
 using QC_Automation_TeamWork.Pages;
+using QC_Automation_TeamWork.Data;
+<<<<<<< HEAD
+using QC_Automation_TeamWork.Pages;
+=======
+using QC_Automation_TeamWork.Pages.StoreContactUsPage;
+using QC_Automation_TeamWork.Pages.StoreProductComparePage;
+using QC_Automation_TeamWork.Pages.StoreSearchPage;
+using QC_Automation_TeamWork.Pages.StoreSuccessContactPage;
+>>>>>>> Madlen_feature
 using System.Threading;
 
 namespace QC_Automation_TeamWork.Tests

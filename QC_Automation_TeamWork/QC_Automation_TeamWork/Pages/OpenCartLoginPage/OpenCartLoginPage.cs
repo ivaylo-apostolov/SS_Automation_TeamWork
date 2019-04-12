@@ -1,7 +1,5 @@
 ﻿using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data.Models;
-using QC_Automation_TeamWork.Pages;
-using System.Threading;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -32,8 +30,6 @@ namespace QC_Automation_TeamWork.Pages
         {
             Map.LoginButton.Click();
         }
-
-
         public PinSecurityCheckPage Login(LoginWithEmail email)
         {
             TypeEmail(email.Email);
@@ -43,5 +39,14 @@ namespace QC_Automation_TeamWork.Pages
 
             return new PinSecurityCheckPage();
         }
+
+        internal void ClickForgotPasswordLink()
+        {
+            Map.ForgottenPasswordElement.Click();
+        }
     }
 }
+    
+
+
+

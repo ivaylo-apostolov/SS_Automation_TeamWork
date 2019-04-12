@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
+
 
 namespace QC_Automation_TeamWork.Pages
 {

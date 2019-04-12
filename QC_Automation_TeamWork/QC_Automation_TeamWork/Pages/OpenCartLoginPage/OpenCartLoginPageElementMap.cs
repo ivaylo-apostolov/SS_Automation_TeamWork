@@ -28,5 +28,23 @@ namespace QC_Automation_TeamWork.Pages
                 return GetElement(By.CssSelector("button.btn"));
             }
         }
+    
+        public IWebElement ForgottenPasswordElement
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='account-login']/div[2]/div/div[1]/form/div[3]/div[2]/a"));
+            }
+        }
+        
+        public IWebElement ResetPasswordMessage
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='account-login']/div[2]/div[1]"));
+            }
+        }
+
     }
-}
+ }
+
