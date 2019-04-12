@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QC_Automation_TeamWork.Pages.DemoAdminPage
+namespace QC_Automation_TeamWork.Pages
 {
     public class DemoAdminPage : BasePage<DemoAdminPageElementMap>
     {
