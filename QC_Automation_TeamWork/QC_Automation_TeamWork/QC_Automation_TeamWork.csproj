@@ -119,8 +119,6 @@
     <Compile Include="Tests\MenuCamerasButtonTesting.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Test01DashboardPageOpenCartLink.cs" />
-    <Compile Include="Tests\Test01LoginAsAdmin.cs" />
-    <Compile Include="Tests\Test02LogoutAsAdmin.cs" />
     <Compile Include="Tests\Test02ProductFilter.cs" />
   </ItemGroup>
   <ItemGroup>

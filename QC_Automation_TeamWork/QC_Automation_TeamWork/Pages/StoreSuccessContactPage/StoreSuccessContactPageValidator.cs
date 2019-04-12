@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QC_Automation_TeamWork.Core;
 
-namespace QC_Automation_TeamWork.Pages.StoreSuccessContactPage
+namespace QC_Automation_TeamWork.Pages
 {
     public class StoreSuccessContactPageValidator : BasePageValidator<StoreSuccessContactPageElementMap>
     {

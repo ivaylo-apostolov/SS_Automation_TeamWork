@@ -1,7 +1,10 @@
 ﻿using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> Madlen_feature
 namespace QC_Automation_TeamWork.Pages
 {
     public class StoreCamerasPageElementMap : BasePageElementMap
@@ -13,7 +16,5 @@ namespace QC_Automation_TeamWork.Pages
                 return GetElement(By.CssSelector("h2"));
             }
         }
-
-
     }
 }
