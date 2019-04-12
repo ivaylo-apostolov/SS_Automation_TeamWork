@@ -1,4 +1,5 @@
 ﻿using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Data;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -45,6 +46,17 @@ namespace QC_Automation_TeamWork.Pages
         {
             Map.OrdersPage.Click();
             return new DashboardPage();
+        }
+
+        public DashboardPage LoginProvider()
+        {
+            var user = TestData.User;
+
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+            loginPage.Validate().LoginForm();
+
+            return loginPage.Login(user);
         }
     }
 }

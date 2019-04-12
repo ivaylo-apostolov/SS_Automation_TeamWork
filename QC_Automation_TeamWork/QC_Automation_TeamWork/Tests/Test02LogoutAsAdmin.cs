@@ -10,21 +10,26 @@ namespace QC_Automation_TeamWork.Tests
     {
         [TestCategory("MladenVarbevTests")]
         [TestMethod]
-        public void LogoutAsAdmin()
+        public void LoginAsAdmin()
         {
-            var loginPage = new LoginPage();
-
-            loginPage.Navigate();
-            loginPage.Validate().LoginForm();
-
-            var user = TestData.User;
-
-            var dashboardPage = loginPage.Login(user);
+            var dashboardPage = LoginProvider();
 
             dashboardPage.Validate().SuccessfulLogin();
 
-            loginPage = dashboardPage.Header.Logout();
+            var loginPage = dashboardPage.Header.Logout();
+
             loginPage.Validate().LoginForm();
+        }
+
+        public DashboardPage LoginProvider()
+        {
+            var user = TestData.User;
+
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+            loginPage.Validate().LoginForm();
+
+            return loginPage.Login(user);
         }
     }
 }
