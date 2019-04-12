@@ -3,7 +3,6 @@ using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data;
 using QC_Automation_TeamWork.Pages;
 
-
 namespace QC_Automation_TeamWork.Tests
 {
     [TestClass]
@@ -14,14 +13,15 @@ namespace QC_Automation_TeamWork.Tests
         public void LoginAsAdmin()
         {
             var loginPage = new LoginPage();
+
             loginPage.Navigate();
+            loginPage.Validate().LoginForm();
 
             var user = TestData.User;
 
             var dashboardPage = loginPage.Login(user);
 
-            Assert.AreEqual(TestData.UserFullName,
-                dashboardPage.GetLoggedUserFullName());
+            dashboardPage.Validate().SuccessfulLogin();
         }
     }
 }

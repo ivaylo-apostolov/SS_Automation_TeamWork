@@ -36,5 +36,21 @@ namespace QC_Automation_TeamWork.Pages
                 return GetElement(By.XPath("//a[contains(text(),'demo demo ')]"));
             }
         }
+
+        public IWebElement HomePageHeading
+        {
+            get
+            {
+                return GetElement(By.CssSelector("h1"));
+            }
+        }
+
+        public IWebElement OrdersPage
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='content']/div[2]/div[1]/div[1]/div/div[3]/a"));
+            }
+        }
     }
 }

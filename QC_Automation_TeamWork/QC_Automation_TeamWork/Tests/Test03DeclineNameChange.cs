@@ -6,11 +6,11 @@ using QC_Automation_TeamWork.Pages;
 namespace QC_Automation_TeamWork.Tests
 {
     [TestClass]
-    public class Test02LogoutAsAdmin : BaseTest
+    public class Test03DeclineNameChange : BaseTest
     {
         [TestCategory("MladenVarbevTests")]
         [TestMethod]
-        public void LogoutAsAdmin()
+        public void DeclineNameChange()
         {
             var loginPage = new LoginPage();
 
@@ -21,10 +21,14 @@ namespace QC_Automation_TeamWork.Tests
 
             var dashboardPage = loginPage.Login(user);
 
-            dashboardPage.Validate().SuccessfulLogin();
+            var profilePage = new ProfilePage();
 
-            loginPage = dashboardPage.Header.Logout();
-            loginPage.Validate().LoginForm();
+            profilePage = dashboardPage.Header.NavigateToUserProfile();
+
+            var newUser = TestData.UserForNameChange;
+
+            profilePage.ChangeName(newUser);
+            profilePage.Validate().ThrowWarningMessage();
         }
     }
 }

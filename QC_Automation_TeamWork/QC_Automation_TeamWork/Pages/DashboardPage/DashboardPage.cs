@@ -7,6 +7,11 @@ namespace QC_Automation_TeamWork.Pages
 {
     public class DashboardPage : BasePage<DashboardPageElementMap, DashboardPageValidator>
     {
+
+        public DashboardPage() : base(new Header())
+        {
+        }
+
         public string GetLoggedUserFullName()
         {
             return "abv";
@@ -16,10 +21,15 @@ namespace QC_Automation_TeamWork.Pages
         {
             Map.OpenCartLink.Click();
         }
+        
+        public string GetHomePageHeadingText()
+        {
+            return Map.HomePageHeading.Text;
+        }
 
         internal void Logout()
         {
-            throw new NotImplementedException();
+            Map.LogoutButton.Click();
         }
 
         //private string pageUrl = "https://www.opencart.com/index.php?route=cms/demo/";
@@ -32,6 +42,12 @@ namespace QC_Automation_TeamWork.Pages
         internal string AdminHeader()
         {
             return Map.AdminHeader.Text;
+        }
+
+        public DashboardPage GoToOrders()
+        {
+            Map.OrdersPage.Click();
+            return new DashboardPage();
         }
     }
 }
