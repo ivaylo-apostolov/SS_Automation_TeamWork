@@ -1,13 +1,6 @@
 ﻿using QC_Automation_TeamWork.Core;
 
-using QC_Automation_TeamWork.Pages.LoginPage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QC_Automation_TeamWork.Pages.OpenCartHomePage
+namespace QC_Automation_TeamWork.Pages
 {
     public class OpenCartHomePage : BasePage<OpenCartHomePageElementMap, OpenCartHomePageValidator>
     {

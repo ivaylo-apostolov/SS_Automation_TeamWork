@@ -1,7 +1,7 @@
 ﻿using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data.Models;
 
-namespace QC_Automation_TeamWork.Pages.LoginPage
+namespace QC_Automation_TeamWork.Pages
 {
     public class LoginPage : BasePage<LoginPageElementMap, LoginPageValidator>
     {
