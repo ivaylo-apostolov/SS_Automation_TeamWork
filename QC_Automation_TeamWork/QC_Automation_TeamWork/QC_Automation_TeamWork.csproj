@@ -85,10 +85,15 @@
     <Compile Include="Pages\PageComponents\Navigation\Navigation.cs" />
     <Compile Include="Pages\PageComponents\Navigation\NavigationElementMap.cs" />
     <Compile Include="Pages\PageComponents\Navigation\NavigationValidator.cs" />
+<<<<<<< HEAD
     <Compile Include="Pages\ProfilePage\ProfilePage.cs" />
     <Compile Include="Pages\ProfilePage\ProfilePageElementMap.cs" />
     <Compile Include="Pages\ProfilePage\ProfilePageValidator.cs" />
     <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageValidator.cs" />
+=======
+    <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageValidator.cs" />
+    <Compile Include="Tests\DemoAdminLogin.cs" />
+>>>>>>> develop
     <Compile Include="Pages\DashboardPage\DashboardPage.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageElementMap.cs" />
     <Compile Include="Pages\LoginPage\LoginPage.cs" />

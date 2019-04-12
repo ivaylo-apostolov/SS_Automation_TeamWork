@@ -55,6 +55,20 @@ namespace QC_Automation_TeamWork.Core
             return driver.SwitchTo().Alert();
         }
     }
+<<<<<<< HEAD
+=======
+
+    public class BasePage<TM, TV> : BasePage<TM>
+        where TM : BasePageElementMap, new()
+        where TV : BasePageValidator<TM>, new()
+    {
+        public TV Validate()
+        {
+            return new TV();
+        }
+    }
+}
+>>>>>>> develop
 
     public class BasePage<TM, TV> : BasePage<TM>
         where TM : BasePageElementMap, new()
