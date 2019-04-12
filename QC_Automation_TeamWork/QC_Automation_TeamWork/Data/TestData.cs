@@ -195,6 +195,14 @@ namespace QC_Automation_TeamWork.Data
                 return "Product 15";
             }
         }
+
+        public static string SuccessfulReview
+        {
+            get
+            {
+                return "Thank you for your review. It has been submitted to the webmaster for approval.";
+            }
+        }
     }
 }
 
