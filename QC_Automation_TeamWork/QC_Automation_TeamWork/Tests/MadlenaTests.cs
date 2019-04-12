@@ -10,7 +10,7 @@ namespace QC_Automation_TeamWork.Tests
     {
         [TestCategory("MadlenaTests")]
         [TestMethod]
-        public void Test01LogInToDemoAsAdmin()
+        public void Test01LogInAsAdmin()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();
