@@ -40,9 +40,10 @@ namespace QC_Automation_TeamWork.Pages
             return new PinSecurityCheckPage();
         }
 
-        internal void ClickForgotPasswordLink()
+        internal RequestNewPasswordPage ClickForgotPasswordLink()
         {
             Map.ForgottenPasswordElement.Click();
+            return new RequestNewPasswordPage();
         }
     }
 }

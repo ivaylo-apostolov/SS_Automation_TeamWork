@@ -268,6 +268,15 @@ namespace QC_Automation_TeamWork.Data
             get
             {
                 return "Order Details";
+
+            }
+        }
+
+        public static string SuccessfulReview
+        {
+            get
+            {
+                return "Thank you for your review. It has been submitted to the webmaster for approval.";
             }
         }
     }
