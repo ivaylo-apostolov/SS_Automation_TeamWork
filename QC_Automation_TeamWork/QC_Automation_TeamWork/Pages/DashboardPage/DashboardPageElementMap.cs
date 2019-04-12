@@ -22,7 +22,6 @@ namespace QC_Automation_TeamWork.Pages
         }
 
         public IWebElement AdminHeader
-
         {
             get
             {

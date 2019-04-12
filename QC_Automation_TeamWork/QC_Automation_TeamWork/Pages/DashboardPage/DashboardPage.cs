@@ -7,21 +7,17 @@ namespace QC_Automation_TeamWork.Pages
 {
     public class DashboardPage : BasePage<DashboardPageElementMap, DashboardPageValidator>
     {
-       // public string GetLoggedUserFullName()
-
+        public string GetLoggedUserFullName()
+        {
+            return "abv";
+        }
            
         internal void ClickOpenCartLink()
-
         {
             Map.OpenCartLink.Click();
         }
 
         internal void Logout()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal string GetLoggedUserFullName()
         {
             throw new NotImplementedException();
         }
