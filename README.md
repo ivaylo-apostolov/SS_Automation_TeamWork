@@ -1,6 +1,4 @@
-# SS_Automation_TeamWork
-
-Team project based on Advanced Page Object Model contains Tests for OpenCart eCommerce platform.
+# Team project based on Advanced Page Object Model contains Tests for OpenCart eCommerce platform.
 
 Project is using C# Programming language - target Framework: .NET Framework 4.5
 
@@ -8,11 +6,15 @@ Additional drivers: <Selenium.WebDriver v3.141.0 | Selenium.Webdriver.ChromeDriv
 
 <MSTest.TestAdapter v1.4.0 | MSTest.Testframework v1.4.0>
 
-Used tools: Visual Studio Community 2017
+
+
+Used tools:
+
+Visual Studio Community 2017 | Integrated Development Environment
 
 Sourcetree | Git GUI tool
 
-Browser | Google Chrome
+Google Chrome | Browser
 
 Skype | Team communicating tool
 
