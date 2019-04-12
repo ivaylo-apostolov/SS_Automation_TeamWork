@@ -6,11 +6,11 @@ using QC_Automation_TeamWork.Pages;
 namespace QC_Automation_TeamWork.Tests
 {
     [TestClass]
-    public class Test02LogoutAsAdmin : BaseTest
+    public class Test04FilterOrdersByName : BaseTest
     {
         [TestCategory("MladenVarbevTests")]
         [TestMethod]
-        public void LogoutAsAdmin()
+        public void DeclineNameChange()
         {
             var loginPage = new LoginPage();
 
@@ -19,12 +19,14 @@ namespace QC_Automation_TeamWork.Tests
 
             var user = TestData.User;
 
-            var dashboardPage = loginPage.Login(user);
+            var dashboardPage = loginPage.Login(user).GoToOrders();
 
-            dashboardPage.Validate().SuccessfulLogin();
+            var ordersPage = new OrdersPage();
 
-            loginPage = dashboardPage.Header.Logout();
-            loginPage.Validate().LoginForm();
+            var currentCustomer = TestData.Customer;
+
+            ordersPage.FilterByUser(currentCustomer);
+            ordersPage.Validate().Filtering();
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Linq;
+﻿
 using QC_Automation_TeamWork.Core;
 
 namespace QC_Automation_TeamWork.Pages
@@ -13,24 +13,6 @@ namespace QC_Automation_TeamWork.Pages
         {
             Driver.Browser.Navigate().GoToUrl(pageURL);
         }
-
-        public void WriteReview()
-        {
-            Map.WriteReviewLink.Click();
-
-            Map.ReviewerName.Clear();
-            Map.ReviewerName.SendKeys("Madlena");
-
-            Map.Review.Clear();
-            Map.Review.SendKeys("Very nice product! I like it!");
-            
-            var goodRatingRadioButton = Map.Rating.ElementAt(4);
-            goodRatingRadioButton.Click();
-
-            Map.Continuebutton.Click();
-
-        }
-          
     }
 }
 

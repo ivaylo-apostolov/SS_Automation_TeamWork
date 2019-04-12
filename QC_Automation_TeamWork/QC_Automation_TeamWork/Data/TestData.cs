@@ -28,6 +28,22 @@ namespace QC_Automation_TeamWork.Data
             }
         }
 
+        public static User UserForNameChange
+        {
+            get
+            {
+                return new User("Mladen", "Varbev");
+            }
+        }
+
+        public static Customer Customer
+        {
+            get
+            {
+                return new Customer("Bob Smith");
+            }
+        }
+
         public static Product ProductMacBook
         {
             get
@@ -73,6 +89,32 @@ namespace QC_Automation_TeamWork.Data
             get
             {
                 return "Please enter your login details.";
+            }
+        }
+
+
+        public static string WarningMessage
+        {
+            get
+            {
+                return @"Warning: You do not have permission to modify your profile!
+×";
+            }
+        }
+
+        public static string ExpectedCustomer
+        {
+            get
+            {
+                return "Bob Smith";
+            }
+        }
+
+        public static string ExpectedBanner
+        {
+            get
+            {
+                return "Community Forum";
             }
         }
 
@@ -196,13 +238,6 @@ namespace QC_Automation_TeamWork.Data
             }
         }
 
-        public static string SuccessfulReview
-        {
-            get
-            {
-                return "Thank you for your review. It has been submitted to the webmaster for approval.";
-            }
-        }
     }
 }
 

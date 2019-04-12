@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
-using System.Collections.Generic;
+
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -10,7 +10,7 @@ namespace QC_Automation_TeamWork.Pages
         {
             get
             {
-                return GetElement(By.XPath("//*[@id='content']/div[1]/div[2]/h1"));
+                return GetElement(By.Id("input-password"));
             }
         }
 
@@ -18,7 +18,7 @@ namespace QC_Automation_TeamWork.Pages
         {
             get
             {
-                return GetElement(By.XPath("//*[@id='content']/div[1]/div[2]/div[3]/p/a[2]"));
+                return GetElement(By.XPath("////*[@id='content']/div[1]/div[2]/div[3]/p/a[2]"));
             }
         }
 
@@ -38,25 +38,18 @@ namespace QC_Automation_TeamWork.Pages
             }
         }
 
-        public IReadOnlyCollection<IWebElement> Rating
+        public IWebElement Rating
         {
             get
             {
-                return GetElements(By.XPath("//input[@name='rating']"));
+                return GetElement(By.Id("input-review"));
             }
-        }
+        }// WRITE IWEBELEMENT FOR RADIOBUTTONS
         public IWebElement Continuebutton
         {
             get
             {
                 return GetElement(By.Id("button-review"));
-            }
-        }
-        public IWebElement SuccessfulReviewMessage
-        {
-            get
-            {
-                return GetElement(By.CssSelector(".alert-success"));
             }
         }
     }

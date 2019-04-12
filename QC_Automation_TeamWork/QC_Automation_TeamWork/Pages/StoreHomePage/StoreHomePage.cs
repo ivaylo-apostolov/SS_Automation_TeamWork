@@ -16,12 +16,6 @@ namespace QC_Automation_TeamWork.Pages
             Map.CamerasButton.Click();
         }
 
-        internal IphonePage ClickIphoneButton()
-        {
-            Map.Iphone.Click();
-            return new IphonePage();
-        }
-
         internal void TypeInSearchTextBox(string searchText)
         {
             var searchTextBoxElement = Map.SearchTextBoxElement;
