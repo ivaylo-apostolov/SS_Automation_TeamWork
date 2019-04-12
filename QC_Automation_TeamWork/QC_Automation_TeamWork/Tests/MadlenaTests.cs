@@ -50,12 +50,22 @@ namespace QC_Automation_TeamWork.Tests
             openCartHomePage.Navigate();
             var openCartLoginPage = openCartHomePage.ClickLoginButton();
 
-            openCartLoginPage.ClickForgotPasswordLink();
+            var requestNewPasswordPage = openCartLoginPage.ClickForgotPasswordLink();
 
-            var requestNewPasswordPage = new RequestNewPasswordPage();
             requestNewPasswordPage.RequestNewPassword("mad17@abv.bg");
 
             openCartLoginPage.Validate().ResetPasswordMessage();
+        }
+
+        [TestCategory("MadlenaTests")]
+        [TestMethod]
+        public void Test05IphoneReview()
+        {
+            var storeHomePage = new StoreHomePage();
+            storeHomePage.Navigate();
+            IphonePage iphonePage = storeHomePage.ClickIphoneButton();
+            iphonePage.WriteReview();
+            iphonePage.Validate().SuccessfulReview();
         }
     }
 }
