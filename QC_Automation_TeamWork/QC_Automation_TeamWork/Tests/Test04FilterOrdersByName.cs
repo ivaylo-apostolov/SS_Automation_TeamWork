@@ -10,16 +10,12 @@ namespace QC_Automation_TeamWork.Tests
     {
         [TestCategory("MladenVarbevTests")]
         [TestMethod]
-        public void DeclineNameChange()
+        public void FilterOrdersByName()
         {
-            var loginPage = new LoginPage();
+            var dashboardPage = LoginProvider();
+            dashboardPage.Validate().SuccessfulLogin();
 
-            loginPage.Navigate();
-            loginPage.Validate().LoginForm();
-
-            var user = TestData.User;
-
-            var dashboardPage = loginPage.Login(user).GoToOrders();
+            var loginPage = dashboardPage.GoToOrders();
 
             var ordersPage = new OrdersPage();
 
@@ -27,6 +23,16 @@ namespace QC_Automation_TeamWork.Tests
 
             ordersPage.FilterByUser(currentCustomer);
             ordersPage.Validate().Filtering();
+        }
+        public DashboardPage LoginProvider()
+        {
+            var user = TestData.User;
+
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+            loginPage.Validate().LoginForm();
+
+            return loginPage.Login(user);
         }
     }
 }

@@ -12,19 +12,22 @@ namespace QC_Automation_TeamWork.Tests
         [TestMethod]
         public void LogoutAsAdmin()
         {
-            var loginPage = new LoginPage();
+            var dashboardPage = LoginProvider();
+            dashboardPage.Validate().SuccessfulLogin();
 
+            var loginPage = dashboardPage.Header.Logout();
+
+            loginPage.Validate().LoginForm();
+        }
+        public DashboardPage LoginProvider()
+        {
+            var user = TestData.User;
+
+            var loginPage = new LoginPage();
             loginPage.Navigate();
             loginPage.Validate().LoginForm();
 
-            var user = TestData.User;
-
-            var dashboardPage = loginPage.Login(user);
-
-            dashboardPage.Validate().SuccessfulLogin();
-
-            loginPage = dashboardPage.Header.Logout();
-            loginPage.Validate().LoginForm();
+            return loginPage.Login(user);
         }
     }
 }

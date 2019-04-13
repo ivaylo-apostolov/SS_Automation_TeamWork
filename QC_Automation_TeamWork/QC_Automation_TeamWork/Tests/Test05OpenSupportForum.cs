@@ -12,18 +12,24 @@ namespace QC_Automation_TeamWork.Tests
         [TestMethod]
         public void OpenSupportForum()
         {
-            var loginPage = new LoginPage();
+            var dashboardPage = LoginProvider();
+            dashboardPage.Validate().SuccessfulLogin();
 
-            loginPage.Navigate();
-            loginPage.Validate().LoginForm();
-
-            var user = TestData.User;
-
-            var dashboardPage = loginPage.Login(user).Header.NavigateToSupportForum();
+            var loginPage = dashboardPage.Header.NavigateToSupportForum();
 
             var supportForum = new SupportForum();
 
             supportForum.Validate().BannerChecking();
+        }
+        public DashboardPage LoginProvider()
+        {
+            var user = TestData.User;
+
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+            loginPage.Validate().LoginForm();
+
+            return loginPage.Login(user);
         }
     }
 }
