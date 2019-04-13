@@ -2,6 +2,7 @@
 using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Pages;
 using QC_Automation_TeamWork.Data;
+using QC_Automation_TeamWork.Pages;
 using System.Threading;
 
 namespace QC_Automation_TeamWork.Tests

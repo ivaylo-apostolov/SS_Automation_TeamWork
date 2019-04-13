@@ -222,6 +222,14 @@ namespace QC_Automation_TeamWork.Data
             }
         }
 
+        public static MetaTitle MetaTitle
+        {
+            get
+            {
+                return new MetaTitle("Toma");
+            }
+        }
+
         public static string FilterButtonTitle
         {
             get
@@ -238,6 +246,30 @@ namespace QC_Automation_TeamWork.Data
             }
         }
 
+        public static string SettingsWarningMessage
+        {
+            get
+            {
+                return @"Warning: You do not have permission to modify settings!
+×";
+            }
+        }
+
+        public static string ChangedCurrency
+        {
+            get
+            {
+                return "518.16€";
+            }
+        }
+
+        public static string PrintShippingList
+        {
+            get
+            {
+                return "Order Details";
+            }
+        }
     }
 }
 

@@ -1,7 +1,8 @@
 ﻿using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Pages;
 using OpenQA.Selenium;
 
-namespace QC_Automation_TeamWork.Pages.PageComponents.Navigation
+namespace QC_Automation_TeamWork.Pages
 {
     public class NavigationElementMap : BasePageElementMap
     {
@@ -20,5 +21,21 @@ namespace QC_Automation_TeamWork.Pages.PageComponents.Navigation
                 return GetElement(By.XPath("//*[@id='collapse1']/li[2]/a"));
             }
         }
-     }
- }
+
+        public IWebElement SystemDropDownMenuButton
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='menu-system']/a"));
+            }
+        }
+
+        public IWebElement SalesDropDownMenuButton
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='menu-sale']/a"));
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 ﻿using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Pages;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -146,6 +147,14 @@ namespace QC_Automation_TeamWork.Pages
             get
             {
                 return GetElement(By.PartialLinkText("product comparison"));
+            }
+        }
+
+        public IWebElement MacBookLink
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='content']/div[2]/div[1]/div/div[2]/h4/a"));
             }
         }
     }

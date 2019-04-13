@@ -1,7 +1,9 @@
 using System;
 using OpenQA.Selenium;
+using QC_Automation_TeamWork.Pages;
 using QC_Automation_TeamWork.Core;
-
+using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -32,13 +34,6 @@ namespace QC_Automation_TeamWork.Pages
             Map.LogoutButton.Click();
         }
 
-        //private string pageUrl = "https://www.opencart.com/index.php?route=cms/demo/";
-
-        //internal void Navigate()
-        //{
-        //    Driver.Browser.Navigate().GoToUrl(pageUrl);
-        //}
-
         internal string AdminHeader()
         {
             return Map.AdminHeader.Text;
@@ -51,3 +46,4 @@ namespace QC_Automation_TeamWork.Pages
         }
     }
 }
+
