@@ -10,6 +10,6 @@ namespace QC_Automation_TeamWork.Pages
         internal void SuccessfulLogin()
         {
             Assert.AreEqual(TestData.UserFullName, Map.LoggedUserName.Text);
-        }        
+        }   
     }
 }

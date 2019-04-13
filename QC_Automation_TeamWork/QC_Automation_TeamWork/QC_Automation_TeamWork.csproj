@@ -91,6 +91,7 @@
     <Compile Include="Pages\StoreCurrency\StoreCurrency.cs" />
     <Compile Include="Pages\StoreCurrency\StoreCurrencyElementMap.cs" />
     <Compile Include="Pages\StoreCurrency\StoreCurrencyValidator.cs" />
+    <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageValidator.cs" />
     <Compile Include="Tests\DemoAdminLogin.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPage.cs" />
     <Compile Include="Pages\DashboardPage\DashboardPageElementMap.cs" />

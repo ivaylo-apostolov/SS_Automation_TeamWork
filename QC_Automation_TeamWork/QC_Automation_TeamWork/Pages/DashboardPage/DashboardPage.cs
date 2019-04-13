@@ -27,7 +27,12 @@ namespace QC_Automation_TeamWork.Pages
         internal string AdminHeader()
         {
             throw new NotImplementedException();
-        }                       
+		}
+
+        internal string AdminHeader()
+        {
+            return Map.AdminHeader.Text;
+        }
     }
 }
 

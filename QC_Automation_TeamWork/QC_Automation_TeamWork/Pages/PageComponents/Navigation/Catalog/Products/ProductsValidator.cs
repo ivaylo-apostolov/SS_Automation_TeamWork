@@ -17,4 +17,4 @@ namespace QC_Automation_TeamWork.Pages
             Assert.AreEqual(TestData.ModelFilterResultField, Map.ModelFilterResultField.Text);
         }
     }
-}
+ }

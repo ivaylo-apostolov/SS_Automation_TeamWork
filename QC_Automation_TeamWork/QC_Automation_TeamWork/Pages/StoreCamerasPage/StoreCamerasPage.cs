@@ -3,7 +3,7 @@ using QC_Automation_TeamWork.Pages;
 
 namespace QC_Automation_TeamWork.Pages
 {
-    public class StoreCamerasPage : BasePage<StoreCamerasPageElementMap>
+    public class StoreCamerasPage : BasePage<StoreCamerasPageElementMap, StoreCamerasPageValidator>
     {
         internal string LocateCamerasPageHeader()
         {

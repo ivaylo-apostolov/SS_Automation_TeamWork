@@ -19,7 +19,9 @@ namespace QC_Automation_TeamWork.Tests
             var camerasPage = new StoreCamerasPage();
             camerasPage.LocateCamerasPageHeader();
 
-            Assert.AreEqual(TestData.ExpectedCamerasPageHeading, camerasPage.LocateCamerasPageHeader());
+            camerasPage.Validate().CamerasPage();
+
+            //Assert.AreEqual(TestData.ExpectedCamerasPageHeading, camerasPage.LocateCamerasPageHeader());
         }
     }
 }

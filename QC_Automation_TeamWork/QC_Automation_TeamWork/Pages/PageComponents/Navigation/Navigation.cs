@@ -20,6 +20,6 @@ namespace QC_Automation_TeamWork.Pages
         {
             Map.SalesDropDownMenuButton.Click();
         }               
-    }       
+    }   
 }
 

@@ -11,10 +11,9 @@ namespace QC_Automation_TeamWork.Pages
         {
             get
             {
-
                 return GetElement(By.CssSelector("#cms-demo>div.container>div>div:nth-child(2)>div>a"));
-            //    return GetElement(By.XPath("//*[@id='cms-demo']/div[2]/div/div[2]/div/a"));
-            }                              
+                //return GetElement(By.XPath("//*[@id='cms-demo']/div[2]/div/div[2]/div/a"));
+            }
         }
     }
 }
