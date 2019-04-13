@@ -1,8 +1,11 @@
 ﻿using System;
 using OpenQA.Selenium;
+using QC_Automation_TeamWork.Pages;
 using QC_Automation_TeamWork.Core;
+using System.Collections.ObjectModel;
+using System.Linq;
 
-namespace QC_Automation_TeamWork.Pages.DashboardPage 
+namespace QC_Automation_TeamWork.Pages
 {
     public class DashboardPage : BasePage<DashboardPageElementMap, DashboardPageValidator>
     {          
@@ -24,6 +27,7 @@ namespace QC_Automation_TeamWork.Pages.DashboardPage
         internal string AdminHeader()
         {
             throw new NotImplementedException();
-        }
+        }                       
     }
 }
+

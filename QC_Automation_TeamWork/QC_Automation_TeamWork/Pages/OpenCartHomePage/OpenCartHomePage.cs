@@ -1,7 +1,7 @@
 ﻿using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Pages;
 
-
-namespace QC_Automation_TeamWork.Pages.OpenCartHomePage
+namespace QC_Automation_TeamWork.Pages
 {
     public class OpenCartHomePage : BasePage<OpenCartHomePageElementMap, OpenCartHomePageValidator>
     {

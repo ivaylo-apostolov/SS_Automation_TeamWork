@@ -1,11 +1,7 @@
 ﻿using QC_Automation_TeamWork.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using QC_Automation_TeamWork.Pages;
 
-namespace QC_Automation_TeamWork.Pages.StoreHomePage
+namespace QC_Automation_TeamWork.Pages
 {
     public class StoreHomePage : BasePage<StoreHomePageElementMap>
     {
@@ -19,6 +15,11 @@ namespace QC_Automation_TeamWork.Pages.StoreHomePage
         internal void ClickCamerasButton()
         {
             Map.CamerasButton.Click();
+        }
+
+        internal void ClickOnMacBook()
+        {
+            Map.MacBookLink.Click();
         }
     }
 }

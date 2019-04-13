@@ -2,17 +2,21 @@
 using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data;
 using QC_Automation_TeamWork.Pages;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace QC_Automation_TeamWork.Tests
 {
     [TestClass]
-    public class Test01DashboardPageOpenCartLink : BaseTest
+    public class Test05PrintShippingList : BaseTest
     {
         [TestCategory("TomaLazarovTests")]
         [TestMethod]
-        public void DashboardPageOpenCartLink()
+
+        public void PrintShippingList()
         {
             var loginPage = new LoginPage();
+
             loginPage.Navigate();
             loginPage.Validate().LoginForm();
 
@@ -20,13 +24,18 @@ namespace QC_Automation_TeamWork.Tests
 
             var dashboardPage = loginPage.Login(user);
 
-            dashboardPage.Validate().SuccessfulLogin();
+            var sales = new Navigation();
+            sales.ClickSalesDropDownMenu();
 
-            dashboardPage.ClickOpenCartLink();
+            var orders = new Orders();
+            orders.ClickOrdersButton();
 
-            var openCartHomePage = new OpenCartHomePage();
+            var ordersPage = orders.NavigateToPrintShippingListPage();
 
-            openCartHomePage.Validate().SuccessfullOpenCartLink();
+            var printShippingList = new PrintShippingListPage();
+            printShippingList.Validate().PrintShippingListChecking();
         }
     }
 }
+
+
