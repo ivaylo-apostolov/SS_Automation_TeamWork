@@ -12,14 +12,8 @@ namespace QC_Automation_TeamWork.Tests
         [TestMethod]
         public void DeclineNameChange()
         {
-            var loginPage = new LoginPage();
-
-            loginPage.Navigate();
-            loginPage.Validate().LoginForm();
-
-            var user = TestData.User;
-
-            var dashboardPage = loginPage.Login(user);
+            var dashboardPage = LoginProvider();
+            dashboardPage.Validate().SuccessfulLogin();
 
             var profilePage = new ProfilePage();
 
@@ -29,6 +23,16 @@ namespace QC_Automation_TeamWork.Tests
 
             profilePage.ChangeName(newUser);
             profilePage.Validate().ThrowWarningMessage();
+        }
+        public DashboardPage LoginProvider()
+        {
+            var user = TestData.User;
+
+            var loginPage = new LoginPage();
+            loginPage.Navigate();
+            loginPage.Validate().LoginForm();
+
+            return loginPage.Login(user);
         }
     }
 }
