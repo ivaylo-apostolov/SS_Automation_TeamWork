@@ -51,7 +51,7 @@ namespace QC_Automation_TeamWork.Data
                 return new Product("MacBook");
             }
         }
-         
+
         public static Product ProductIPhone
         {
             get
@@ -277,6 +277,55 @@ namespace QC_Automation_TeamWork.Data
             get
             {
                 return "Thank you for your review. It has been submitted to the webmaster for approval.";
+            }
+        }
+
+
+        public static string Pincode
+        {
+            get
+            {
+                return "1717";
+            }
+        }
+
+        public static string Account
+        {
+            get
+            {
+                return "Account";
+            }
+        }
+
+        public static string ResetPasswordMessage
+        {
+            get
+            {
+                return "Success: An email with a reset link has been sent your email address!";
+            }
+        }
+
+        public static string Email
+        {
+            get
+            {
+                return "mad17@abv.bg";
+            }
+        }
+
+        public static string ReviewerName
+        {
+            get
+            {
+                return "Madlena";
+            }
+        }
+
+        public static string Review
+        {
+            get
+            {
+                return "Very nice product! I like it!";
             }
         }
     }

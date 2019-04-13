@@ -36,7 +36,7 @@ namespace QC_Automation_TeamWork.Tests
             var openCartLoginPage = openCartHomePage.ClickLoginButton();
             var pinSecurityCheckPage = openCartLoginPage.Login(new Data.Models.LoginWithEmail("mad17@abv.bg", "englisc"));
 
-            pinSecurityCheckPage.TypePincode("1717");
+            pinSecurityCheckPage.TypePincode(TestData.Pincode);
             var accountPage = pinSecurityCheckPage.ContinueButtonClick();
 
             accountPage.Validate().SuccessfulLogin();
@@ -52,9 +52,9 @@ namespace QC_Automation_TeamWork.Tests
 
             var requestNewPasswordPage = openCartLoginPage.ClickForgotPasswordLink();
 
-            requestNewPasswordPage.RequestNewPassword("mad17@abv.bg");
+            requestNewPasswordPage.RequestNewPassword(TestData.Email);
 
-            openCartLoginPage.Validate().ResetPasswordMessage();
+            openCartLoginPage.Validate().CheckResetPasswordMessage();
         }
 
         [TestCategory("MadlenaTests")]

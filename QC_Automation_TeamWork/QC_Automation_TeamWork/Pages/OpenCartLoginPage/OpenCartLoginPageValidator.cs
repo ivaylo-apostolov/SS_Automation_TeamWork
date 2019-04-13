@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QC_Automation_TeamWork.Core;
-
+using QC_Automation_TeamWork.Data;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -13,9 +13,9 @@ namespace QC_Automation_TeamWork.Pages
             //Assert.IsTrue(Map.LoginButton.Displayed, "Login button is not displayed!");
         }
 
-        public void ResetPasswordMessage()
+        public void CheckResetPasswordMessage()
         {
-            Assert.IsTrue(Map.ResetPasswordMessage.Text.Contains("Success: An email with a reset link has been sent your email address!"));
+            Assert.IsTrue(Map.ResetPasswordMessage.Text.Contains(TestData.ResetPasswordMessage));
         }
     }
 }
