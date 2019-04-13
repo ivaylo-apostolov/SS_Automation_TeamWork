@@ -13,7 +13,5 @@ namespace QC_Automation_TeamWork.Pages
                 return GetElement(By.CssSelector("h2"));
             }
         }
-
-
     }
 }

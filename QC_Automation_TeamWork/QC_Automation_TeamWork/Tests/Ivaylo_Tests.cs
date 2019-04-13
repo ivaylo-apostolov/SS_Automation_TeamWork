@@ -1,8 +1,12 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using QC_Automation_TeamWork.Core;
-using QC_Automation_TeamWork.Pages;
 using QC_Automation_TeamWork.Data;
-using QC_Automation_TeamWork.Pages;
+using QC_Automation_TeamWork.Pages.StoreCamerasPage;
+using QC_Automation_TeamWork.Pages.StoreContactUsPage;
+using QC_Automation_TeamWork.Pages.StoreHomePage;
+using QC_Automation_TeamWork.Pages.StoreProductComparePage;
+using QC_Automation_TeamWork.Pages.StoreSearchPage;
+using QC_Automation_TeamWork.Pages.StoreSuccessContactPage;
 using System.Threading;
 
 namespace QC_Automation_TeamWork.Tests
@@ -99,11 +103,10 @@ namespace QC_Automation_TeamWork.Tests
 
             var productComparePage = new StoreProductComparePage();
 
-            var firstProduct = TestData.ProductMacBook;
-            var secondProduct = TestData.ProductIPhone;
+            var product = TestData.Product;
 
-            productComparePage.Validate().FirstProduct(firstProduct.Productname);
-            productComparePage.Validate().SecondProduct(secondProduct.Productname);
+            productComparePage.Validate().FirstProduct(product.StoreFirstProductName);
+            productComparePage.Validate().SecondProduct(product.StoreSecondtProductName);
         }
     }
 }

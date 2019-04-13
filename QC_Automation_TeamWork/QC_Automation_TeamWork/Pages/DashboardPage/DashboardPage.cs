@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using OpenQA.Selenium;
 using QC_Automation_TeamWork.Pages;
 using QC_Automation_TeamWork.Core;
@@ -8,30 +8,41 @@ using System.Linq;
 namespace QC_Automation_TeamWork.Pages
 {
     public class DashboardPage : BasePage<DashboardPageElementMap, DashboardPageValidator>
-    {          
+    {
+
+        public DashboardPage() : base(new Header())
+        {
+        }
+
+        public string GetLoggedUserFullName()
+        {
+            return "abv";
+        }
+           
         internal void ClickOpenCartLink()
         {
             Map.OpenCartLink.Click();
         }
+        
+        public string GetHomePageHeadingText()
+        {
+            return Map.HomePageHeading.Text;
+        }
 
         internal void Logout()
         {
-            throw new NotImplementedException();
+            Map.LogoutButton.Click();
         }
-
-        internal string GetLoggedUserFullName()
-        {
-            throw new NotImplementedException();
-        }
-
-        internal string AdminHeader()
-        {
-            throw new NotImplementedException();
-		}
 
         internal string AdminHeader()
         {
             return Map.AdminHeader.Text;
+        }
+
+        public DashboardPage GoToOrders()
+        {
+            Map.OrdersPage.Click();
+            return new DashboardPage();
         }
     }
 }

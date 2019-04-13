@@ -12,6 +12,10 @@ namespace QC_Automation_TeamWork.Data.Models
         }
 
         public string Productname { get; set; }
+
+        public bool CompareWithAnotherProduct(Product anotherProduct)
+        {
+            return this.Productname == anotherProduct.Productname;
+        }
     }
 }
-

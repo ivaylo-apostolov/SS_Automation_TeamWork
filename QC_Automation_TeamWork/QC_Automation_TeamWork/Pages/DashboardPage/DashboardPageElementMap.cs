@@ -23,7 +23,6 @@ namespace QC_Automation_TeamWork.Pages
         }
 
         public IWebElement AdminHeader
-
         {
             get
             {
@@ -39,20 +38,19 @@ namespace QC_Automation_TeamWork.Pages
             }
         }
 
-        public IWebElement AdminHeader
-
+        public IWebElement HomePageHeading
         {
             get
             {
-                return GetElement(By.XPath("//*[@id='content']/div[1]/div/h1"));
+                return GetElement(By.CssSelector("h1"));
             }
         }
 
-        public IWebElement LoggedUserName
+        public IWebElement OrdersPage
         {
             get
             {
-                return GetElement(By.XPath("//a[contains(text(),'demo demo ')]"));
+                return GetElement(By.XPath("//*[@id='content']/div[2]/div[1]/div[1]/div/div[3]/a"));
             }
         }
     }
