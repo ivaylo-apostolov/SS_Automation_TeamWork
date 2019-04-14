@@ -29,7 +29,6 @@ namespace QC_Automation_TeamWork.Pages
             goodRatingRadioButton.Click();
 
             Map.Continuebutton.Click();
-
         }
           
     }

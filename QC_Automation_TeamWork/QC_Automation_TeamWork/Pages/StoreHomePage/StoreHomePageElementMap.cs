@@ -20,7 +20,6 @@ namespace QC_Automation_TeamWork.Pages
             {
                 return GetElement(By.XPath("//*[@id='menu']/div[2]/ul/li[7]/a"));
             }
-
         }
             
         public IWebElement Iphone

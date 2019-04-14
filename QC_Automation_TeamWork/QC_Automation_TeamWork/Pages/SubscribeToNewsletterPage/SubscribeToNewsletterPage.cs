@@ -19,7 +19,6 @@ namespace QC_Automation_TeamWork.Pages
             Map.SubscribeToNewsletterType.Click();
 
             Map.SubscribeButton.Click();
-
         }
     }
 }

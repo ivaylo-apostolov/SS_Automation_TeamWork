@@ -28,6 +28,7 @@ namespace QC_Automation_TeamWork.Tests
             openCartHomePage.Navigate();
             openCartHomePage.Validate().HomePageHeadingText();
             var subscribeToNewsletterPage = openCartHomePage.ClickNewsletter();
+            Thread.Sleep(2000);
             subscribeToNewsletterPage.FilledSubscriptionForm();
             subscribeToNewsletterPage.Validate().ValidateError();
         }

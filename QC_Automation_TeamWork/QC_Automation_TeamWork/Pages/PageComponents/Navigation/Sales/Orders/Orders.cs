@@ -20,11 +20,6 @@ namespace QC_Automation_TeamWork.Pages
             Map.ViewOrderButton.Click();
         }
 
-        //internal void ClickPrintShippingListButton()
-        //{
-        //    Map.PrintShippingListButton.Click();
-        //}
-
         public Orders NavigateToPrintShippingListPage()
         {
             ClickViewOrderButton();

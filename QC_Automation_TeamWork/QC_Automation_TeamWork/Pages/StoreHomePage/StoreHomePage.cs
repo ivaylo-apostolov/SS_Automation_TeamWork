@@ -12,9 +12,10 @@ namespace QC_Automation_TeamWork.Pages
             Driver.Browser.Navigate().GoToUrl(pageUrl);
         }
 
-        internal void ClickCamerasButton()
+        internal StoreCamerasPage ClickCamerasButton()
         {
             Map.CamerasButton.Click();
+            return new StoreCamerasPage();
         }
 
         internal void ClickOnMacBook()
@@ -35,9 +36,10 @@ namespace QC_Automation_TeamWork.Pages
             searchTextBoxElement.SendKeys(searchText);
         }
 
-        internal void ClickOnSearchButton()
+        internal StoreSearchResultPage ClickOnSearchButton()
         {
             Map.SearchButton.Click();
+            return new StoreSearchResultPage();
         }
 
         internal void AddToCardMacBook()
@@ -55,9 +57,10 @@ namespace QC_Automation_TeamWork.Pages
             Map.BasketButton.Click();
         }
 
-        internal void ClickFooterContactUsButton()
+        internal StoreContactUsPage ClickFooterContactUsButton()
         {
             Map.FooterContactUsButton.Click();
+            return new StoreContactUsPage();
         }
 
         internal void CompareFirstProduct()
@@ -80,9 +83,10 @@ namespace QC_Automation_TeamWork.Pages
             return Map.TextSecondProduct;
         }
 
-        internal void ClickOnProductComparisonButton()
+        internal StoreProductComparePage ClickOnProductComparisonButton()
         {
             Map.ProductComparisonButton.Click();
+            return new StoreProductComparePage();
         }
     }
 }
