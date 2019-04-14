@@ -29,5 +29,15 @@ namespace QC_Automation_TeamWork.Pages
                 return GetElement(By.CssSelector("h1"));
             }
         }
+
+
+        public IWebElement NewsletterButton
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='newsletter']/div/div/button"));
+            }
+        }
+
     }
 }

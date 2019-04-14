@@ -328,7 +328,14 @@ namespace QC_Automation_TeamWork.Data
                 return "Very nice product! I like it!";
             }
         }
+
+        public static string AlertText
+        {
+            get
+            {
+                return "Error: This subscribe form requires that you fill in a CAPTCHA to be added to the list.";
+            }
+        }
     }
 }
-
 

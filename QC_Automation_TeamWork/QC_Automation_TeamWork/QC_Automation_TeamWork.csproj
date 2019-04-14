@@ -117,6 +117,9 @@
     <Compile Include="Pages\RequestNewPasswordPage\RequestNewPasswordPageElementMap.cs" />
     <Compile Include="Pages\RequestNewPasswordPage\RequestNewPasswordPageValidator.cs" />
     <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageValidator.cs" />
+    <Compile Include="Pages\SubscribeToNewsletterPage\SubscribeToNewsletterPage.cs" />
+    <Compile Include="Pages\SubscribeToNewsletterPage\SubscribeToNewsletterPageElementMap.cs" />
+    <Compile Include="Pages\SubscribeToNewsletterPage\SubscribeToNewsletterPageValidator.cs" />
     <Compile Include="Pages\SupportForum\SupportForum.cs" />
     <Compile Include="Pages\SupportForum\SupportForumElementMap.cs" />
     <Compile Include="Pages\SupportForum\SupportForumValidator.cs" />

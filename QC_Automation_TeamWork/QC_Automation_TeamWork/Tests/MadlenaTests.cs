@@ -1,14 +1,16 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data;
 using QC_Automation_TeamWork.Pages;
+using System.Threading;
 
 namespace QC_Automation_TeamWork.Tests
 {
     [TestClass]
     public class MadlenaTests : BaseTest
     {
-        [TestCategory("MadlenaTests")]
+        [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
         public void Test01LogInAsAdmin()
         {
@@ -18,16 +20,19 @@ namespace QC_Automation_TeamWork.Tests
             dashboard.Validate().SuccessfulLogin();
         }
 
-        [TestCategory("MadlenaTests")]
+        [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test02NavigateToHomePage()
+        public void Test02SubscribeToNewsletter()
         {
             var openCartHomePage = new OpenCartHomePage();
             openCartHomePage.Navigate();
             openCartHomePage.Validate().HomePageHeadingText();
+            var subscribeToNewsletterPage = openCartHomePage.ClickNewsletter();
+            subscribeToNewsletterPage.FilledSubscriptionForm();
+            subscribeToNewsletterPage.Validate().ValidateError();
         }
 
-        [TestCategory("MadlenaTests")]
+        [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
         public void Test03OpenCartLogin()
         {
@@ -42,7 +47,7 @@ namespace QC_Automation_TeamWork.Tests
             accountPage.Validate().SuccessfulLogin();
         }
 
-        [TestCategory("MadlenaTests")]
+        [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
         public void Test04RequestNewPassword()
         {
@@ -57,7 +62,7 @@ namespace QC_Automation_TeamWork.Tests
             openCartLoginPage.Validate().CheckResetPasswordMessage();
         }
 
-        [TestCategory("MadlenaTests")]
+        [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
         public void Test05IphoneReview()
         {
