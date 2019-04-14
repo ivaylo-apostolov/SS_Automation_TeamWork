@@ -1,9 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data;
 using QC_Automation_TeamWork.Pages;
-using System.Threading;
 
 namespace QC_Automation_TeamWork.Tests
 {
@@ -12,35 +10,25 @@ namespace QC_Automation_TeamWork.Tests
     {
         [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test01LogInAsAdmin()
-        {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-            var dashboard = loginPage.Login(TestData.User);
-            dashboard.Validate().SuccessfulLogin();
-        }
-
-        [TestCategory("MadlenaIvanovaTests")]
-        [TestMethod]
-        public void Test02SubscribeToNewsletter()
+        public void Test01SubscribeToNewsletter()
         {
             var openCartHomePage = new OpenCartHomePage();
             openCartHomePage.Navigate();
             openCartHomePage.Validate().HomePageHeadingText();
             var subscribeToNewsletterPage = openCartHomePage.ClickNewsletter();
             subscribeToNewsletterPage.FilledSubscriptionForm();
+
             subscribeToNewsletterPage.Validate().ValidateError();
         }
 
         [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test03OpenCartLogin()
+        public void Test02OpenCartLogin()
         {
             var openCartHomePage = new OpenCartHomePage();
             openCartHomePage.Navigate();
             var openCartLoginPage = openCartHomePage.ClickLoginButton();
-            var pinSecurityCheckPage = openCartLoginPage.Login(new Data.Models.LoginWithEmail("mad17@abv.bg", "englisc"));
-
+            var pinSecurityCheckPage = openCartLoginPage.Login(TestData.LoginWithEmail);
             pinSecurityCheckPage.TypePincode(TestData.Pincode);
             var accountPage = pinSecurityCheckPage.ContinueButtonClick();
 
@@ -49,14 +37,12 @@ namespace QC_Automation_TeamWork.Tests
 
         [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test04RequestNewPassword()
+        public void Test03RequestNewPassword()
         {
             var openCartHomePage = new OpenCartHomePage();
             openCartHomePage.Navigate();
             var openCartLoginPage = openCartHomePage.ClickLoginButton();
-
             var requestNewPasswordPage = openCartLoginPage.ClickForgotPasswordLink();
-
             requestNewPasswordPage.RequestNewPassword(TestData.Email);
 
             openCartLoginPage.Validate().CheckResetPasswordMessage();
@@ -64,22 +50,24 @@ namespace QC_Automation_TeamWork.Tests
 
         [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test05IphoneReview()
+        public void Test04IphoneReview()
         {
             var storeHomePage = new StoreHomePage();
             storeHomePage.Navigate();
             IphonePage iphonePage = storeHomePage.ClickIphoneButton();
             iphonePage.WriteReview();
+
             iphonePage.Validate().SuccessfulReview();
         }
 
         [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test06SearchForFacebook()
+        public void Test05SearchForFacebook()
         {
             var marketplacepage = new MarketplacePage();
             marketplacepage.Navigate();
             marketplacepage.UseSearchFilter();
+
             marketplacepage.Validate().SearchForFacebook();
         }
     }

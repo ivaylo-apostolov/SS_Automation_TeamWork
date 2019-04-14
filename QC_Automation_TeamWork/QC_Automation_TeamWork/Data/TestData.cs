@@ -313,6 +313,14 @@ namespace QC_Automation_TeamWork.Data
             }
         }
 
+        public static LoginWithEmail LoginWithEmail
+        {
+            get
+            {
+                return new LoginWithEmail(Email, "englisc");
+            }
+        }
+
         public static string ReviewerName
         {
             get
