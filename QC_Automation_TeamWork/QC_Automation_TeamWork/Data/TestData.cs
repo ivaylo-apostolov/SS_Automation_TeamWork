@@ -313,6 +313,14 @@ namespace QC_Automation_TeamWork.Data
             }
         }
 
+        public static LoginWithEmail LoginWithEmail
+        {
+            get
+            {
+                return new LoginWithEmail(Email, "englisc");
+            }
+        }
+
         public static string ReviewerName
         {
             get
@@ -334,6 +342,22 @@ namespace QC_Automation_TeamWork.Data
             get
             {
                 return "Error: This subscribe form requires that you fill in a CAPTCHA to be added to the list.";
+            }
+        }
+        public static string SearchFilterValue
+        {
+            get
+            {
+                return "facebook";
+            }
+        }
+
+
+        public static string SearchResult
+        {
+            get
+            {
+                return "Facebook for OpenCart";
             }
         }
     }
