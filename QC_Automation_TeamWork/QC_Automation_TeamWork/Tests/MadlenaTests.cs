@@ -8,64 +8,67 @@ namespace QC_Automation_TeamWork.Tests
     [TestClass]
     public class MadlenaTests : BaseTest
     {
-        [TestCategory("MadlenaTests")]
+        [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test01LogInAsAdmin()
-        {
-            var loginPage = new LoginPage();
-            loginPage.Navigate();
-            var dashboard = loginPage.Login(TestData.User);
-            dashboard.Validate().SuccessfulLogin();
-        }
-
-        [TestCategory("MadlenaTests")]
-        [TestMethod]
-        public void Test02NavigateToHomePage()
+        public void Test01SubscribeToNewsletter()
         {
             var openCartHomePage = new OpenCartHomePage();
             openCartHomePage.Navigate();
             openCartHomePage.Validate().HomePageHeadingText();
+            var subscribeToNewsletterPage = openCartHomePage.ClickNewsletter();
+            subscribeToNewsletterPage.FilledSubscriptionForm();
+
+            subscribeToNewsletterPage.Validate().ValidateError();
         }
 
-        [TestCategory("MadlenaTests")]
+        [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test03OpenCartLogin()
+        public void Test02OpenCartLogin()
         {
             var openCartHomePage = new OpenCartHomePage();
             openCartHomePage.Navigate();
             var openCartLoginPage = openCartHomePage.ClickLoginButton();
-            var pinSecurityCheckPage = openCartLoginPage.Login(new Data.Models.LoginWithEmail("mad17@abv.bg", "englisc"));
-
-            pinSecurityCheckPage.TypePincode("1717");
+            var pinSecurityCheckPage = openCartLoginPage.Login(TestData.LoginWithEmail);
+            pinSecurityCheckPage.TypePincode(TestData.Pincode);
             var accountPage = pinSecurityCheckPage.ContinueButtonClick();
 
             accountPage.Validate().SuccessfulLogin();
         }
 
-        [TestCategory("MadlenaTests")]
+        [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test04RequestNewPassword()
+        public void Test03RequestNewPassword()
         {
             var openCartHomePage = new OpenCartHomePage();
             openCartHomePage.Navigate();
             var openCartLoginPage = openCartHomePage.ClickLoginButton();
-
             var requestNewPasswordPage = openCartLoginPage.ClickForgotPasswordLink();
+            requestNewPasswordPage.RequestNewPassword(TestData.Email);
 
-            requestNewPasswordPage.RequestNewPassword("mad17@abv.bg");
-
-            openCartLoginPage.Validate().ResetPasswordMessage();
+            openCartLoginPage.Validate().CheckResetPasswordMessage();
         }
 
-        [TestCategory("MadlenaTests")]
+        [TestCategory("MadlenaIvanovaTests")]
         [TestMethod]
-        public void Test05IphoneReview()
+        public void Test04IphoneReview()
         {
             var storeHomePage = new StoreHomePage();
             storeHomePage.Navigate();
             IphonePage iphonePage = storeHomePage.ClickIphoneButton();
             iphonePage.WriteReview();
+
             iphonePage.Validate().SuccessfulReview();
+        }
+
+        [TestCategory("MadlenaIvanovaTests")]
+        [TestMethod]
+        public void Test05SearchForFacebook()
+        {
+            var marketplacepage = new MarketplacePage();
+            marketplacepage.Navigate();
+            marketplacepage.UseSearchFilter();
+
+            marketplacepage.Validate().SearchForFacebook();
         }
     }
 }

@@ -2,16 +2,12 @@
 using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data;
 using QC_Automation_TeamWork.Pages;
-using QC_Automation_TeamWork.Pages.PageComponents.Navigation;
-using QC_Automation_TeamWork.Pages.PageComponents.Navigation.Catalog.Products;
 
 namespace QC_Automation_TeamWork.Tests
 {
-    public class Test02ProductFilter
-    {
-        [TestClass]
-        public class AdminDemoDashboardPage : BaseTest
-        {
+    [TestClass]
+    public class Test02ProductFilter : BaseTest
+    {                    
             [TestCategory("TomaLazarovTests")]
             [TestMethod]
             public void Test01DashboardPageOpenCartLink()
@@ -46,6 +42,6 @@ namespace QC_Automation_TeamWork.Tests
                 var modelFieldResult = new Products();
                 modelFieldResult.Validate().SuccessfulFilterResult();                
             }
-        }
     }
 }
+

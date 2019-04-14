@@ -1,4 +1,5 @@
 ﻿using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Pages;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -16,6 +17,11 @@ namespace QC_Automation_TeamWork.Pages
             Map.CamerasButton.Click();
         }
 
+        internal void ClickOnMacBook()
+        {
+            Map.MacBookLink.Click();
+		}
+
         internal IphonePage ClickIphoneButton()
         {
             Map.Iphone.Click();
@@ -27,7 +33,6 @@ namespace QC_Automation_TeamWork.Pages
             var searchTextBoxElement = Map.SearchTextBoxElement;
             searchTextBoxElement.Clear();
             searchTextBoxElement.SendKeys(searchText);
-
         }
 
         internal void ClickOnSearchButton()

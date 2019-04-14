@@ -1,5 +1,6 @@
-﻿using QC_Automation_TeamWork.Core;
-using OpenQA.Selenium;
+﻿using OpenQA.Selenium;
+using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Pages;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -11,7 +12,7 @@ namespace QC_Automation_TeamWork.Pages
             {
                 return GetElement(By.XPath("//*[@id='footer']/a"));
             }
-        }       
+        }
 
         public IWebElement LogoutButton
         {
@@ -34,6 +35,22 @@ namespace QC_Automation_TeamWork.Pages
             get
             {
                 return GetElement(By.XPath("//a[contains(text(),'demo demo ')]"));
+            }
+        }
+
+        public IWebElement HomePageHeading
+        {
+            get
+            {
+                return GetElement(By.CssSelector("h1"));
+            }
+        }
+
+        public IWebElement OrdersPage
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='content']/div[2]/div[1]/div[1]/div/div[3]/a"));
             }
         }
     }

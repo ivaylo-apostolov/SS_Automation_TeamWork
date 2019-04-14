@@ -11,6 +11,5 @@ namespace QC_Automation_TeamWork.Pages
         {
             Assert.AreEqual(TestData.SuccessfulReview, Map.SuccessfulReviewMessage.Text);
         }
-
     }
 }

@@ -6,11 +6,11 @@ using QC_Automation_TeamWork.Pages;
 namespace QC_Automation_TeamWork.Tests
 {
     [TestClass]
-    public class AdminDemoDashboardPage :BaseTest
+    public class Test01DashboardPageOpenCartLink : BaseTest
     {
         [TestCategory("TomaLazarovTests")]
         [TestMethod]
-        public void Test01DashboardPageOpenCartLink()
+        public void DashboardPageOpenCartLink()
         {
             var loginPage = new LoginPage();
             loginPage.Navigate();

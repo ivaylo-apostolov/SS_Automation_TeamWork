@@ -1,4 +1,5 @@
-﻿using QC_Automation_TeamWork.Core;
+﻿using System;
+using QC_Automation_TeamWork.Core;
 
 
 namespace QC_Automation_TeamWork.Pages
@@ -12,6 +13,11 @@ namespace QC_Automation_TeamWork.Pages
             requestNewPassword.SendKeys(emailelement);
 
             Map.SubmitElement.Click();
+        }
+
+        internal void RequestNewPassword(object emailElement)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Data;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -19,10 +20,10 @@ namespace QC_Automation_TeamWork.Pages
             Map.WriteReviewLink.Click();
 
             Map.ReviewerName.Clear();
-            Map.ReviewerName.SendKeys("Madlena");
+            Map.ReviewerName.SendKeys(TestData.ReviewerName);
 
             Map.Review.Clear();
-            Map.Review.SendKeys("Very nice product! I like it!");
+            Map.Review.SendKeys(TestData.Review);
             
             var goodRatingRadioButton = Map.Rating.ElementAt(4);
             goodRatingRadioButton.Click();
