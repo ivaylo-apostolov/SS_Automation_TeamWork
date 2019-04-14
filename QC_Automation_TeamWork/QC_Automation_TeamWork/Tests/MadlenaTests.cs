@@ -72,6 +72,16 @@ namespace QC_Automation_TeamWork.Tests
             iphonePage.WriteReview();
             iphonePage.Validate().SuccessfulReview();
         }
+
+        [TestCategory("MadlenaIvanovaTests")]
+        [TestMethod]
+        public void Test06SearchForFacebook()
+        {
+            var marketplacepage = new MarketplacePage();
+            marketplacepage.Navigate();
+            marketplacepage.UseSearchFilter();
+            marketplacepage.Validate().SearchForFacebook();
+        }
     }
 }
 

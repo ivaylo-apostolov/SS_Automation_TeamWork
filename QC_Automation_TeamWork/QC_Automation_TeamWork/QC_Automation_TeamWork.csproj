@@ -73,6 +73,9 @@
     <Compile Include="Pages\IphoneReviewPage\IphoneReviewPage.cs" />
     <Compile Include="Pages\IphoneReviewPage\IphoneReviewPageElementMap.cs" />
     <Compile Include="Pages\IphoneReviewPage\IphoneReviewPageValidator.cs" />
+    <Compile Include="Pages\MarketplacePage\MarketplacePage.cs" />
+    <Compile Include="Pages\MarketplacePage\MarketplacePageElementMap.cs" />
+    <Compile Include="Pages\MarketplacePage\MarketplacePageValidator.cs" />
     <Compile Include="Pages\OpenCartLoginPage\OpenCartLoginPage.cs" />
     <Compile Include="Pages\OpenCartLoginPage\OpenCartLoginPageElementMap.cs" />
     <Compile Include="Pages\OpenCartLoginPage\OpenCartLoginPageValidator.cs" />
