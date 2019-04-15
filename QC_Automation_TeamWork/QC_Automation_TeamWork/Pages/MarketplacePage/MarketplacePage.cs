@@ -15,7 +15,6 @@ namespace QC_Automation_TeamWork.Pages
         public void UseSearchFilter()
         {
             Map.SearchFilterBox.Clear();
-
             Map.SearchFilterBox.SendKeys(TestData.SearchFilterValue);
             Map.SearchFilterButton.Click();
 
@@ -23,4 +22,3 @@ namespace QC_Automation_TeamWork.Pages
         }
     }
 }
-

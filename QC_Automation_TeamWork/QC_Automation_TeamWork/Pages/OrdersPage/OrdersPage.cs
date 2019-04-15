@@ -12,6 +12,7 @@ namespace QC_Automation_TeamWork.Pages
         internal void WriteFilterName(string Customer)
         {
             var customerFilter = Map.CustomerFilter;
+
             customerFilter.Clear();
             customerFilter.SendKeys(Customer);
         }
@@ -19,13 +20,16 @@ namespace QC_Automation_TeamWork.Pages
         internal void ClickFilterButton()
         {
             var filterButton = Map.FilterButton;
+
             filterButton.Click();
         }
 
         public OrdersPage FilterByUser(Customer customer)
         {
             WriteFilterName(customer.CustomerName);
+
             ClickFilterButton();
+
             return new OrdersPage();
         }
     }

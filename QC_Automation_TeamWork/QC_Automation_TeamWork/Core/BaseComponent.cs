@@ -1,5 +1,4 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Interactions;
 
 namespace QC_Automation_TeamWork.Core
 {

@@ -7,6 +7,7 @@ namespace QC_Automation_TeamWork.Pages
         public void TypePincode(string pincode)
         {
             var PincodeElement = Map.Pincode;
+
             PincodeElement.Clear();
             PincodeElement.SendKeys(pincode);
         }
@@ -18,5 +19,4 @@ namespace QC_Automation_TeamWork.Pages
             return new AccountPage();
         }
     }
-
 }
