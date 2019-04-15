@@ -89,6 +89,7 @@ namespace QC_Automation_TeamWork.Tests
 
             productComparePage.Validate().FirstProduct(firstProduct.Productname);
             productComparePage.Validate().SecondProduct(secondProduct.Productname);
+            productComparePage.Validate().ProductsAreDifferent(firstProduct, secondProduct);
         }
 
         private StoreHomePage NavigateToHomePage()
