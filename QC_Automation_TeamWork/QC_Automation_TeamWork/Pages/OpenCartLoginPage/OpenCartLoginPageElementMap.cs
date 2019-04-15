@@ -44,7 +44,6 @@ namespace QC_Automation_TeamWork.Pages
                 return GetElement(By.XPath("//*[@id='account-login']/div[2]/div[1]"));
             }
         }
-
     }
  }
 

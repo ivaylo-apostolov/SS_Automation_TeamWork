@@ -8,6 +8,5 @@
         }
 
         public string CustomerName { get; set; }
-
     }
 }

@@ -3,23 +3,20 @@ using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Pages;
 using QC_Automation_TeamWork.Data;
 using System.Threading;
+using System;
 
 namespace QC_Automation_TeamWork.Tests
 {
     [TestClass]
-    public class MenuCamerasButtonTesting : BaseTest
+    public class IvayloTests : BaseTest
     {
         [TestCategory("IvayloTests")]
         [TestMethod]
         public void Test01NavigateToCameraPage()
         {
-            var homePage = new StoreHomePage();
-            homePage.Navigate();
-            homePage.ClickCamerasButton();
+            var homePage = NavigateToHomePage();
 
-            var camerasPage = new StoreCamerasPage();
-            camerasPage.LocateCamerasPageHeader();
-
+            var camerasPage = homePage.ClickCamerasButton();
             camerasPage.Validate().CamerasPage();
         }
 
@@ -27,13 +24,11 @@ namespace QC_Automation_TeamWork.Tests
         [TestMethod]
         public void Test02NavigateToSearchResultsPage()
         {
-            var homePage = new StoreHomePage();
-            homePage.Navigate();
+            var homePage = NavigateToHomePage();
 
             homePage.TypeInSearchTextBox(TestData.SearchText);
-            homePage.ClickOnSearchButton();
 
-            var searchResultPage = new StoreSearchResultPage();
+            var searchResultPage = homePage.ClickOnSearchButton();
             searchResultPage.Validate().SearchResult();
         }
 
@@ -41,8 +36,7 @@ namespace QC_Automation_TeamWork.Tests
         [TestMethod]
         public void Test03AddGoodsToCard()
         {
-            var homePage = new StoreHomePage();
-            homePage.Navigate();
+            var homePage = NavigateToHomePage();
 
             homePage.AddToCardMacBook();
             Thread.Sleep(1500);
@@ -62,21 +56,16 @@ namespace QC_Automation_TeamWork.Tests
         [TestMethod]
         public void Test04SendEnquiryUsingContactForm()
         {
-            var homePage = new StoreHomePage();
-            homePage.Navigate();
+            var homePage = NavigateToHomePage();
 
-            homePage.ClickFooterContactUsButton();
-
-            var contactUsPage = new StoreContactUsPage();
+            var contactUsPage = homePage.ClickFooterContactUsButton();
             contactUsPage.Validate().ContactUsHeader();
 
             contactUsPage.TypeInYourNameTextBox(TestData.NameInContactUsForm);
             contactUsPage.TypeInEmailAddressTextBox(TestData.EmailInContactUsForm);
             contactUsPage.TypeInEnquiryTextBox(TestData.EnquiryTextInContactUsForm);
 
-            contactUsPage.ClickOnSubmitButton();
-
-            var successContactPage = new StoreSuccessContactPage();
+            var successContactPage = contactUsPage.ClickOnSubmitButton();
             successContactPage.Validate().PageHeading();
         }
 
@@ -84,8 +73,7 @@ namespace QC_Automation_TeamWork.Tests
         [TestMethod]
         public void Test05CompareTwoProducts()
         {
-            var homePage = new StoreHomePage();
-            homePage.Navigate();
+            var homePage = NavigateToHomePage();
 
             homePage.CompareFirstProduct();
             Thread.Sleep(1500);
@@ -93,16 +81,21 @@ namespace QC_Automation_TeamWork.Tests
             homePage.CompareSecondProduct();
             Thread.Sleep(1500);
 
-            homePage.ClickOnProductComparisonButton();
+            var productComparePage = homePage.ClickOnProductComparisonButton();
             Thread.Sleep(2000);
-
-            var productComparePage = new StoreProductComparePage();
 
             var firstProduct = TestData.ProductMacBook;
             var secondProduct = TestData.ProductIPhone;
 
             productComparePage.Validate().FirstProduct(firstProduct.Productname);
             productComparePage.Validate().SecondProduct(secondProduct.Productname);
+        }
+
+        private StoreHomePage NavigateToHomePage()
+        {
+            var homePage = new StoreHomePage();
+            homePage.Navigate();
+            return homePage;
         }
     }
 }

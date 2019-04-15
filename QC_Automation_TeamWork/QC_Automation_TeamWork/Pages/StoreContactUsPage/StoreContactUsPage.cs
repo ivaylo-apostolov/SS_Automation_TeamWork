@@ -25,9 +25,10 @@ namespace QC_Automation_TeamWork.Pages
             enquiryTextBox.SendKeys(enquiry);
         }
 
-        internal void ClickOnSubmitButton()
+        internal StoreSuccessContactPage ClickOnSubmitButton()
         {
             Map.SubmitButton.Click();
+            return new StoreSuccessContactPage();
         }
     }
 }

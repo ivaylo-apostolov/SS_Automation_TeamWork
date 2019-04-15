@@ -92,9 +92,6 @@
     <Compile Include="Pages\PageComponents\Header\Header.cs" />
     <Compile Include="Pages\PageComponents\Header\HeaderElementMap.cs" />
     <Compile Include="Pages\PageComponents\Header\HeaderValidator.cs" />
-    <Compile Include="Pages\PageComponents\Navigation\Catalog\Catalog.cs" />
-    <Compile Include="Pages\PageComponents\Navigation\Catalog\CatalogElementMap.cs" />
-    <Compile Include="Pages\PageComponents\Navigation\Catalog\CatalogValidator.cs" />
     <Compile Include="Pages\PageComponents\Navigation\Catalog\Products\Products.cs" />
     <Compile Include="Pages\PageComponents\Navigation\Catalog\Products\ProductsElementMap.cs" />
     <Compile Include="Pages\PageComponents\Navigation\Catalog\Products\ProductsValidator.cs" />
@@ -148,7 +145,7 @@
     <Compile Include="Pages\StoreCamerasPage\StoreCamerasPageElementMap.cs" />
     <Compile Include="Pages\StoreHomePage\StoreHomePage.cs" />
     <Compile Include="Pages\StoreHomePage\StoreHomePageElementMap.cs" />
-    <Compile Include="Tests\MenuCamerasButtonTesting.cs" />
+    <Compile Include="Tests\IvayloTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests\Test01DashboardPageOpenCartLink.cs" />
     <Compile Include="Tests\Test01LoginAsAdmin.cs" />
