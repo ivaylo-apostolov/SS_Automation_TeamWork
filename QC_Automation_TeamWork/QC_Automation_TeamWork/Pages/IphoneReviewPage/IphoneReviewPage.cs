@@ -18,14 +18,13 @@ namespace QC_Automation_TeamWork.Pages
         public void WriteReview()
         {
             Map.WriteReviewLink.Click();
-
             Map.ReviewerName.Clear();
             Map.ReviewerName.SendKeys(TestData.ReviewerName);
-
             Map.Review.Clear();
             Map.Review.SendKeys(TestData.Review);
             
             var goodRatingRadioButton = Map.Rating.ElementAt(4);
+
             goodRatingRadioButton.Click();
 
             Map.Continuebutton.Click();
@@ -33,4 +32,3 @@ namespace QC_Automation_TeamWork.Pages
           
     }
 }
-

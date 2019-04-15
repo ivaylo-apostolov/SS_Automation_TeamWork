@@ -12,18 +12,21 @@ namespace QC_Automation_TeamWork.Pages
         internal void InsertFirstName(string username)
         {
             var firstNameField = Map.FirstNameField;
+
             firstNameField.Clear();
             firstNameField.SendKeys(username);
         }
         internal void InsertLastName(string password)
         {
             var lastNameField = Map.LastNameField;
+
             lastNameField.Clear();
             lastNameField.SendKeys(password);
         }
         internal void ClickSaveButton()
         {
             var button = Map.ProfileSaveButton;
+
             button.Click();
         }
 
@@ -31,6 +34,7 @@ namespace QC_Automation_TeamWork.Pages
         {
             InsertFirstName(user.Username);
             InsertLastName(user.Password);
+
             ClickSaveButton();
 
             return new ProfilePage();

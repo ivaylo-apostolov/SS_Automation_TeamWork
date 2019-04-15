@@ -28,6 +28,7 @@ namespace QC_Automation_TeamWork.Pages
         public ProfilePage NavigateToUserProfile()
         {
             OpenProfileMenu();
+
             Map.YourProfileLink.Click();
 
             return new ProfilePage();
@@ -36,6 +37,7 @@ namespace QC_Automation_TeamWork.Pages
         public ProfilePage NavigateToSupportForum()
         {
             OpenProfileMenu();
+
             Map.OpenSupportForum.Click();
 
             ReadOnlyCollection<string> windowHandles = driver.WindowHandles;

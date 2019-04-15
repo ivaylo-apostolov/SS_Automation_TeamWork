@@ -15,6 +15,7 @@ namespace QC_Automation_TeamWork.Pages
         internal void TypeEmail(string username)
         {
             var usernameElement = Map.EmailElement;
+
             usernameElement.Clear();
             usernameElement.SendKeys(username);
         }
@@ -22,6 +23,7 @@ namespace QC_Automation_TeamWork.Pages
         internal void TypePassword(string password)
         {
             var passwordElement = Map.PasswordElement;
+
             passwordElement.Clear();
             passwordElement.SendKeys(password);
         }
@@ -43,11 +45,8 @@ namespace QC_Automation_TeamWork.Pages
         internal RequestNewPasswordPage ClickForgotPasswordLink()
         {
             Map.ForgottenPasswordElement.Click();
+
             return new RequestNewPasswordPage();
         }
     }
 }
-    
-
-
-

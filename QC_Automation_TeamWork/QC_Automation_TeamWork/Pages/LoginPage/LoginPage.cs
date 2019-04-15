@@ -16,6 +16,7 @@ namespace QC_Automation_TeamWork.Pages
         internal void TypeUsername(string username)
         {
             var usernameElement = Map.UsernameElement;
+
             usernameElement.Clear();
             usernameElement.SendKeys(username);
         }            
@@ -23,6 +24,7 @@ namespace QC_Automation_TeamWork.Pages
         internal void TypePassword(string password)
         {
             var passwordElement = Map.PasswordElement;
+
             passwordElement.Clear();
             passwordElement.SendKeys(password);
         }
@@ -36,6 +38,7 @@ namespace QC_Automation_TeamWork.Pages
         {
             TypeUsername(user.Username);
             TypePassword(user.Password);
+
             ClickLoginButton();
 
             return new DashboardPage();

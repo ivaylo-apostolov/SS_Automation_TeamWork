@@ -1,5 +1,4 @@
 ﻿using QC_Automation_TeamWork.Core;
-using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 
 namespace QC_Automation_TeamWork.Pages

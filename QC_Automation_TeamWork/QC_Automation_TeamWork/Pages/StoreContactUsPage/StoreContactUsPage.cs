@@ -7,6 +7,7 @@ namespace QC_Automation_TeamWork.Pages
         internal void TypeInYourNameTextBox(string name)
         {
             var yourNameTextBox = Map.YourNameTextBox;
+
             yourNameTextBox.Clear();
             yourNameTextBox.SendKeys(name);
         }
@@ -14,6 +15,7 @@ namespace QC_Automation_TeamWork.Pages
         internal void TypeInEmailAddressTextBox(string email)
         {
             var yourEmailTextBox = Map.YourEmailTextBox;
+
             yourEmailTextBox.Clear();
             yourEmailTextBox.SendKeys(email);
         }
@@ -21,6 +23,7 @@ namespace QC_Automation_TeamWork.Pages
         internal void TypeInEnquiryTextBox(string enquiry)
         {
             var enquiryTextBox = Map.EnquiryTextBox;
+
             enquiryTextBox.Clear();
             enquiryTextBox.SendKeys(enquiry);
         }
@@ -28,6 +31,7 @@ namespace QC_Automation_TeamWork.Pages
         internal StoreSuccessContactPage ClickOnSubmitButton()
         {
             Map.SubmitButton.Click();
+
             return new StoreSuccessContactPage();
         }
     }

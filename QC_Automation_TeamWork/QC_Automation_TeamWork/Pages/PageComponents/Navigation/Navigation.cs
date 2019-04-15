@@ -1,6 +1,4 @@
-﻿using System;
-using QC_Automation_TeamWork.Core;
-using QC_Automation_TeamWork.Pages;
+﻿using QC_Automation_TeamWork.Core;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -22,4 +20,3 @@ namespace QC_Automation_TeamWork.Pages
         }               
     }   
 }
-

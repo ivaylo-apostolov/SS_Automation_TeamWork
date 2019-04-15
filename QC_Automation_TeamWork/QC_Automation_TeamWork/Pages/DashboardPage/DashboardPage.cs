@@ -1,9 +1,4 @@
-using System;
-using OpenQA.Selenium;
-using QC_Automation_TeamWork.Pages;
 using QC_Automation_TeamWork.Core;
-using System.Collections.ObjectModel;
-using System.Linq;
 
 namespace QC_Automation_TeamWork.Pages
 {
@@ -46,4 +41,3 @@ namespace QC_Automation_TeamWork.Pages
         }
     }
 }
-

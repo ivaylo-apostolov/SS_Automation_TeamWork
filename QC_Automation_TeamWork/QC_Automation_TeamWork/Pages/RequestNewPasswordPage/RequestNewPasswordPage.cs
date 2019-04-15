@@ -9,6 +9,7 @@ namespace QC_Automation_TeamWork.Pages
         public void RequestNewPassword(string emailelement)
         {
             var requestNewPassword = Map.EmailElement;
+
             requestNewPassword.Clear();
             requestNewPassword.SendKeys(emailelement);
 
