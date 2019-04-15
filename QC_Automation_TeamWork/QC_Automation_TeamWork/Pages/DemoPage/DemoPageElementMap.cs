@@ -1,12 +1,8 @@
 ﻿using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using QC_Automation_TeamWork.Pages;
 
-namespace QC_Automation_TeamWork.Pages.DemoPage
+namespace QC_Automation_TeamWork.Pages
 {
     public class DemoPageElementMap : BasePageElementMap
     {
@@ -15,10 +11,9 @@ namespace QC_Automation_TeamWork.Pages.DemoPage
         {
             get
             {
-
                 return GetElement(By.CssSelector("#cms-demo>div.container>div>div:nth-child(2)>div>a"));
-            //    return GetElement(By.XPath("//*[@id='cms-demo']/div[2]/div/div[2]/div/a"));
-            }                              
+                //return GetElement(By.XPath("//*[@id='cms-demo']/div[2]/div/div[2]/div/a"));
+            }
         }
     }
 }

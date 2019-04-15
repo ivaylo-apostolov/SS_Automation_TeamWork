@@ -1,9 +1,10 @@
 ﻿using QC_Automation_TeamWork.Core;
 using QC_Automation_TeamWork.Data.Models;
+using QC_Automation_TeamWork.Pages;
 
-namespace QC_Automation_TeamWork.Pages.LoginPage
+namespace QC_Automation_TeamWork.Pages
 {
-    public class LoginPage : BasePage<LoginPageElementMap>
+    public class LoginPage : BasePage<LoginPageElementMap, LoginPageValidator>
     {
         private string pageURL = "https://demo.opencart.com/admin/";
 
@@ -15,13 +16,15 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
         internal void TypeUsername(string username)
         {
             var usernameElement = Map.UsernameElement;
+
             usernameElement.Clear();
             usernameElement.SendKeys(username);
-        }
+        }            
 
         internal void TypePassword(string password)
         {
             var passwordElement = Map.PasswordElement;
+
             passwordElement.Clear();
             passwordElement.SendKeys(password);
         }
@@ -31,13 +34,14 @@ namespace QC_Automation_TeamWork.Pages.LoginPage
             Map.LoginButton.Click();
         }
 
-        public DashboardPage.DashboardPage Login(User user)
+        public DashboardPage Login(User user)
         {
             TypeUsername(user.Username);
             TypePassword(user.Password);
+
             ClickLoginButton();
 
-            return new DashboardPage.DashboardPage();
+            return new DashboardPage();
         }
 
         public string GetUsernameInputValue()

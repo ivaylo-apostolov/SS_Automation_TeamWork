@@ -1,23 +1,24 @@
-﻿using System;
-using QC_Automation_TeamWork.Pages.DashboardPage;
-using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
 
-namespace QC_Automation_TeamWork.Pages.DashboardPage
+namespace QC_Automation_TeamWork.Pages
 {
-    public class DashboardPage : BasePage<DashboardPageElementMap>
+    public class DashboardPage : BasePage<DashboardPageElementMap, DashboardPageValidator>
     {
-        public string GetLoggedUserFullName()
+
+        public DashboardPage() : base(new Header())
         {
-            var loggedUserName = Driver.Browser.FindElement(By.XPath("//a[contains(text(),'demo demo ')]"));
-            return loggedUserName.Text;
         }
 
-        internal void OpenCart()
+        public string GetLoggedUserFullName()
+        {
+            return "abv";
+        }
+           
+        internal void ClickOpenCartLink()
         {
             Map.OpenCartLink.Click();
         }
-
+        
         public string GetHomePageHeadingText()
         {
             return Map.HomePageHeading.Text;
@@ -26,6 +27,17 @@ namespace QC_Automation_TeamWork.Pages.DashboardPage
         internal void Logout()
         {
             Map.LogoutButton.Click();
+        }
+
+        internal string AdminHeader()
+        {
+            return Map.AdminHeader.Text;
+        }
+
+        public DashboardPage GoToOrders()
+        {
+            Map.OrdersPage.Click();
+            return new DashboardPage();
         }
     }
 }

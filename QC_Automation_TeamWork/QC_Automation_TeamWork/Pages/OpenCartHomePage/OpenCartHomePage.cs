@@ -1,24 +1,29 @@
-﻿using QC_Automation_TeamWork.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using QC_Automation_TeamWork.Core;
+using QC_Automation_TeamWork.Pages;
 
-namespace QC_Automation_TeamWork.Pages.OpenCartHomePage
+namespace QC_Automation_TeamWork.Pages
 {
-    public class OpenCartHomePage : BasePage<OpenCartHomePageElementMap>
+    public class OpenCartHomePage : BasePage<OpenCartHomePageElementMap, OpenCartHomePageValidator>
     {
-        private string pageUrl = "https://www.opencart.com/";
+        private string pageURL = "http://opencart.com/";
 
-        internal void Navigate()
+        public void Navigate()
         {
-            Driver.Browser.Navigate().GoToUrl(pageUrl);
+            Driver.Browser.Navigate().GoToUrl(pageURL);
         }
 
-        internal void ClickDemoButton()
+        public OpenCartLoginPage ClickLoginButton()
         {
-            Map.DemoHeader.Click();
+            Map.LoginButton.Click();
+
+            return new OpenCartLoginPage();
+        }
+
+        public SubscribeToNewsletterPage ClickNewsletter()
+        {
+            Map.NewsletterButton.Click();
+            return new SubscribeToNewsletterPage();
         }
     }
 }

@@ -1,21 +1,43 @@
 ﻿using OpenQA.Selenium;
 using QC_Automation_TeamWork.Core;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using QC_Automation_TeamWork.Pages;
 
-namespace QC_Automation_TeamWork.Pages.OpenCartHomePage
+namespace QC_Automation_TeamWork.Pages
 {
     public class OpenCartHomePageElementMap : BasePageElementMap
     {
-        public IWebElement DemoHeader
+        public IWebElement OpenCartLink
         {
             get
             {
-                return GetElement(By.XPath("//*[@id='navbar-collapse-header']/ul/li[2]/a"));
+                return GetElement(By.CssSelector("h1"));
             }
         }
+
+        public IWebElement LoginButton
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='navbar-collapse-header']/div/a[1]"));
+            }
+        }
+
+        public IWebElement HomePageHeading
+        {
+            get
+            {
+                return GetElement(By.CssSelector("h1"));
+            }
+        }
+
+
+        public IWebElement NewsletterButton
+        {
+            get
+            {
+                return GetElement(By.XPath("//*[@id='newsletter']/div/div/button"));
+            }
+        }
+
     }
 }
